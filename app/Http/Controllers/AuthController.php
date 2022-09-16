@@ -16,6 +16,7 @@ class AuthController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
+        return redirect()->route('index');
 
     }
     public function login(Request $request)

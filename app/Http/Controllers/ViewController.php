@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\Products;
 
 class ViewController extends Controller
 {
@@ -15,7 +16,8 @@ class ViewController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        $products = Products::all();
+        return view('frontend.index', compact('products'));
     }
 
     public function loginPage()
@@ -26,9 +28,10 @@ class ViewController extends Controller
     {
         return view('frontend.register.registration');
     }
-    public function payment()
+    public function payment($id)
     {
-        return view('frontend.payment.payment');
+        $products =  Products::find($id);
+        return view('frontend.payment.payment', compact('products'));
     }
     public function order(Request $request)
     {

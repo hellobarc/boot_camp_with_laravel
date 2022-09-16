@@ -72,15 +72,15 @@ a.nav-link:hover{
   background-color: #f7d63c;
 }
 .image_blur{
-  filter: blur(40px);
+  filter: blur(77px);
     color: #fff;
-    padding: 9% 15%;
+    padding: 4% 10%;
     background-color: #fff;
     /* width: 50%; */
     position: absolute;
-    top: 15%;
+    top: 23%;
     /* z-index: -1; */
-    right: 19%;
+    right: 25%;
  
 }
 .discount{
@@ -106,9 +106,23 @@ a.nav-link:hover{
 .after_card{
   background-color: #fff;
     border-radius: 15px;
-    padding: 50px 43px;
+    padding: 34px 5px 82px 43px;
     box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
     outline: none;
+}
+.before_after_ul{
+  text-decoration: none !important;
+  list-style: none;
+  font-size: 22px;
+    line-height: 2;
+}
+.new_beginning_card_header_p{
+  color: #ff0322;
+    margin-right: 13px;
+}
+.new_beginning_card2_header_p{
+  color: #27bb02;
+    margin-right: 13px;
 }
 .margin_left{
   margin-right: 100px;
@@ -198,8 +212,10 @@ a.nav-link:hover{
 }
 .about_project_empty_div{
   background-color: #f7d63c;
-  padding: 80px 4px;
-  margin-right: 40px;
+    padding: 108px 4px;
+    margin-right: 40px;
+    position: absolute;
+    margin-top: 24px;
 }
 /* price section css start */
 .price_card{

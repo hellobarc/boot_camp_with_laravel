@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,11 +30,19 @@
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
   </head>
   <body>
+    @php
+             $token = "<script>document.writeln(localStorage.getItem('token'))</script>";
+              session('token',  $token);
+     $mytoken = session('token');
+     echo  $mytoken;
+    @endphp
     <main>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" style="background-color: #222221">
                 <div class="container">
-                  <a class="navbar-brand" href="#" style="color: #fff; font-weight:700; font-size:2rem;">Boot<span class="main_color">camp</span></a>
+                  <a class="navbar-brand" href="#" > 
+                    <img src="{{asset('img/Png-yellow.png')}}" alt="" style="width: 15%">
+                  </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -205,7 +214,7 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div>
-                                    <img src="{{asset('img/gallary_2.jpg')}}" alt="" class="gallary_image">
+                                    <img src="{{asset('img/gallary_2.png')}}" alt="" class="gallary_image">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -215,11 +224,11 @@
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div class="mt-3">
-                                    <img src="{{asset('img/gallary_4.jpg')}}" alt="" class="gallary_image">
+                                    <img src="{{asset('img/gallary_4.png')}}" alt="" class="gallary_image">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div>
+                                <div class="mt-3">
                                     <img src="{{asset('img/gallary_5.jpg')}}" alt="" class="gallary_image">
                                 </div>
                             </div>
@@ -264,7 +273,7 @@
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
                         <div class="mt-5">
-                            <span class="me-2"><i class="fa fa-circle" aria-hidden="true"></i></span><span class="h5">Intensive training 60 hours</span> <br>
+                            <span class="me-2"><i class="fa fa-circle" aria-hidden="true"></i></span><span class="h5">Intensive training 16 hours</span> <br>
                             <span class="ml-5"><span class="me-2"><i class="fa fa-circle" aria-hidden="true"></i></span> <span class="h5">Practice session 80 hours</span></span> <br>
                             <span class="ml-5"><span class="me-2"><i class="fa fa-circle" aria-hidden="true"></i></span> <span class="h5">Modules 13</span></span>
                         </div>
@@ -273,36 +282,36 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="mt-5">
-                            <p class="fs-3 fw-bold">Day 1</p>
+                            <p class="fs-1 fw-bolder">First Day</p>
                         </div>
                         <div class="collapse_1">
                             <button class="collapsible">Module 1: Speaking in public</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 2: Ethics and public speaking</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 3: Selecting a topic and purpose</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 4: Analyzing the audience</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 5: Gathering materials</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
@@ -312,48 +321,48 @@
                             </div>
                         </div>
                         <div class="mt-4 mb-3">
-                            <p class="fs-3 fw-bold">Day 2</p>
+                            <p class="fs-1 fw-bolder">Second Day</p>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 7: Organizing the body of the speech</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 8: Beginning and ending the speech</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 9: Outlining the speech</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 10: Using language</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 11: Delivery</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 12: Using visual AIDS</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                         <div class="collapse_11">
                             <button class="collapsible">Module 13: Rock the talk- Confidence building session</button>
                             <div class="content">
-                                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {{-- <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
                             </div>
                         </div>
                     </div>
@@ -365,26 +374,65 @@
         <section class="my-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
+                    {{-- <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
                         <div>
                             <img src="#" alt="" class="zigzag_img">
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
+                    </div> --}}
+                    <div class="col-xl-12 col-lg-12 col-md-12 cold-sm-12 col-xs-12">
                         <div>
-                            <h1 class="display-5 fw-bolder">Why this is a <span style="color: red">must?</span></h1>
-                            <div class="zigzag_text_box">
-                                <strong>To stand out in the workplace</strong>
-                                <p>You only have one chance to make a first impression. Speaking confidently and consistently with conviction, strengthen your leadership skills and get noticed at interview, your desk and the board room.</p>
-                                <strong>Influence Others</strong>
-                                <p>We're not saying you've got to be a motivational speaker or that everybody needs to be your best friend. But we are saying that if you want to create influence, you need to motivate others.</p>
-                                <strong>Connect with People</strong>
-                                <p>Understanding the pulse of people is critical in public speaking. This bootcamp will help you understand how to captivate your audience within the first 5 minutes by getting them to trust, believe and listen to you. You will be able to make them understand that you have valuable insights and opinions to share with the world.</p>
-                                <strong>Boost Self-Confidence</strong>
-                                <p>This bootcamp will help you speak with confidence and credibility, and show audience members they can trust what you say. By overcoming the fears and insecurities, you will start politely dominating your audiences, and taking the lead on the stage.
-                                </p>
-                                <strong>Becoming a creative speaker</strong>
-                                <p>This bootcamp will help you tap into your deepest ideas and emotions to uncover a story that connects and persuades your audience. Simple storytelling framework that you can employ in any situation even if you think you are not a good storyteller. You will learn strategies to deliver your presentation with impact and leave your audience hungry for more.</p>
+                            <h1 class="display-1 fw-bolder">Why this is a <span style="color: red">must?</span></h1>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                            <div class="mt-4">
+                                                {{-- <span class="mt-5"> --}}
+                                                    <span class="about_project_empty_div"></span>
+                                                {{-- </span> --}}
+                                                {{-- <span class="display-1 ml-3">4</span> <span>years</span> --}}
+                                                <strong class="fs-4 fw-bold" style="margin-left: 37px;">To stand out in the workplace</strong>
+                                                <p class="fs-5 mx-5">You only have one chance to make a first impression. Speaking confidently and consistently with conviction, strengthen your leadership skills and get noticed at interview, your desk and the board room.</p>
+                                            </div>
+                                        </div> 
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                            <div class="mt-4">
+                                                <span class="about_project_empty_div"></span>
+                                                {{-- <span class="display-1 ml-3">1500</span> <span>lectures</span> --}}
+                                                <strong class="fs-4 ml-2 fw-bold" style="margin-left: 37px;">Influence Others</strong>
+                                                <p class="fs-5 mx-5">We're not saying you've got to be a motivational speaker or that everybody needs to be your best friend. But we are saying that if you want to create influence, you need to motivate others.</p>
+                                            </div>
+                                        </div> 
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                            <div class="mt-4">
+                                                <span class="about_project_empty_div"></span>
+                                                <strong class="fs-4 ml-2 fw-bold" style="margin-left: 37px;">Connect with People</strong>
+                                                <p class="fs-5 mx-5">Understanding the pulse of people is critical in public speaking. This bootcamp will help you understand how to captivate your audience within the first 5 minutes by getting them to trust, believe and listen to you. You will be able to make them understand that you have valuable insights and opinions to share with the world.</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                            <div class="mt-4">
+                                                <span class="about_project_empty_div"></span>
+                                                {{-- <span class="display-1 ml-3">4</span> <span>years</span> --}}
+                                                <strong class="fs-4 ml-2 fw-bold" style="margin-left: 37px;">Boost Self-Confidence</strong>
+                                                <p class="fs-5 mx-5">This bootcamp will help you speak with confidence and credibility, and show audience members they can trust what you say. By overcoming the fears and insecurities, you will start politely dominating your audiences, and taking the lead on the stage.</p>
+                                            </div>
+                                        </div> 
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                            <div class="mt-4">
+                                                <span class="about_project_empty_div"></span>
+                                                {{-- <span class="display-1 ml-3">4</span> <span>years</span> --}}
+                                                <strong class="fs-4 ml-2 fw-bold" style="margin-left: 37px;">Becoming a creative speaker</strong>
+                                                <p class="fs-5 mx-5">This bootcamp will help you tap into your deepest ideas and emotions to uncover a story that connects and persuades your audience. Simple storytelling framework that you can employ in any situation even if you think you are not a good storyteller. You will learn strategies to deliver your presentation with impact and leave your audience hungry for more.</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    {{-- <div class="mt-5">
+                                        <button type="button" class="btn btn-outline-dark fs-4">Learn more</button>
+                                    </div> --}}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -425,12 +473,12 @@
                             <div class="before_card">
                                 <div class="px-3 py-3">
                                     <h1 class="fw-bold text-uppercase mx-4">Before</h1>
-                                    <ul class="fs-5">
-                                        <li>Don’t know how to start</li>
-                                        <li>Stage frighten</li>
-                                        <li>No control over speech</li>
-                                        <li>Failed to deliver full message</li>
-                                        <li>Don’t know what to answer when asked critical question</li>
+                                    <ul class="before_after_ul">
+                                        <li><span class="new_beginning_card_header_p"><i class="fa fa-times-circle" aria-hidden="true"></i></span>Don’t know how to start</li>
+                                        <li><span class="new_beginning_card_header_p"><i class="fa fa-times-circle" aria-hidden="true"></i></span>Stage frighten</li>
+                                        <li><span class="new_beginning_card_header_p"><i class="fa fa-times-circle" aria-hidden="true"></i></span>No control over speech</li>
+                                        <li><span class="new_beginning_card_header_p"><i class="fa fa-times-circle" aria-hidden="true"></i></span>Failed to deliver full message</li>
+                                        <li><span class="new_beginning_card_header_p"><i class="fa fa-times-circle" aria-hidden="true"></i></span>Don’t know what to answer when asked critical question</li>
                                     </ul>
                                 </div>
                             </div>
@@ -440,12 +488,12 @@
                         <div class="margin_left">
                             <div class="after_card">
                                 <h1 class="fw-bold text-uppercase mx-4">After</h1>
-                                <ul class="fs-5">
-                                    <li>Loaded with self-confidence</li>
-                                    <li>Improved communication skill</li>
-                                    <li>Ability to rock the floor</li>
-                                    <li>Critical Thinking Ability</li>
-                                    <li>Unleashed creativity</li>
+                                <ul class="before_after_ul">
+                                    <li><span class="new_beginning_card2_header_p"><i class="fa fa-check-circle"aria-hidden="true"></i></span>Loaded with self-confidence</li>
+                                    <li><span class="new_beginning_card2_header_p"><i class="fa fa-check-circle"aria-hidden="true"></i></span>Improved communication skill</li>
+                                    <li><span class="new_beginning_card2_header_p"><i class="fa fa-check-circle"aria-hidden="true"></i></span>Ability to rock the floor</li>
+                                    <li><span class="new_beginning_card2_header_p"><i class="fa fa-check-circle"aria-hidden="true"></i></span>Critical Thinking Ability</li>
+                                    <li><span class="new_beginning_card2_header_p"><i class="fa fa-check-circle"aria-hidden="true"></i></span>Unleashed creativity</li>
                                 </ul>
                             </div>
                         </div>
@@ -703,34 +751,7 @@
                             <p class="fs-5">Public Speaking Bootcamp. It's a two-day intensive training session consisting of 5-star class outing. This workshop is perfect for anyone who wants to improve their public speaking skills or make a career change into the world of public speaking. We guarantee that you'll be more confident and comfortable after attending this course.</p>
                         </div>
                     </div>
-                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="mt-4">
-                                    <span class="about_project_empty_div"></span>
-                                    <span class="display-1 ml-3">4</span> <span>years</span>
-                                    <p class="fs-5 mx-5">We have been working for you since 2018</p>
-                                </div>
-                            </div> 
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="mt-4">
-                                    <span class="about_project_empty_div"></span>
-                                    <span class="display-1 ml-3">1500</span> <span>lectures</span>
-                                    <p class="fs-5 mx-5">are created by our authors every year</p>
-                                </div>
-                            </div> 
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="mt-4">
-                                    <span class="about_project_empty_div"></span>
-                                    <span class="display-1 ml-3">9</span> <span>years</span>
-                                    <p class="fs-5 mx-5">The average teaching experience of our authors</p>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="mt-5">
-                            <button type="button" class="btn btn-outline-dark fs-4">Learn more</button>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -779,26 +800,76 @@
                                         </ul>
                                     </div>
                                     <div class="margin_top">
-                                        @if(auth()->user() == true)
-                                        <a href="{{route('payment.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>
-                                        @else
-                                        <a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>
-                                        @endif
+                                        <div id="top_right"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {{-- @foreach ($products as $product)
+                        <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
+                            <div class="">
+                                <div class="price_card">
+                                    <div class="">
+                                        <h4 class="text-center fw-bolder fs-4">{{ $product->product_name }}: <span>{{ $product->product_price }}</span>/-</h4>
+                                        <div class="price_empty_div"></div>
+                                        <div class="p-4">
+                                            <p class="fs-3 fw-bold">{{ $product->product_title }}</p>
+                                            <p class="zigzag_text_box">
+                                                {{ $product->short_desc }}
+                                            </p>
+                                            <p class="zigzag_text_box text-center fw-bold">{{ $product->time }}</p>
+                                            <ul class="zigzag_text_box">
+                                                {!! $product->long_desc !!}
+                                            </ul>
+                                            <p class="zigzag_text_box text-danger fw-bolder">
+                                                @if($product->extra_2 == Null)
+                                                    <p></p>
+                                                @else
+                                                    {{ $product->extra_2 }}
+                                                @endif
+                                            </p>
+                                            <ul class="zigzag_text_box">
+                                                @if($product->extra == Null)
+                                                <p></p>
+                                                @else
+                                                    {!! $product->extra !!}
+                                                @endif
+                                            </ul>
+                                        
+                                        </div>
+                                        <div> --}}
+                                        
+                                            {{-- purchase button --}}
+                                            {{-- <div id="top_right"></div> --}}
+                                            {{-- {{$mytoken}}
+                                        @if ( $mytoken == "null" || $mytoken == null)
+                                        <a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>
+                                        @else
+                                       
+                                        <a href="{{ route('payment.page', $product->id) }}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>   
+                                        @endif
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach --}}
+                   
                     <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
                         <div class="">
                             <div class="price_card">
                                 <div class="">
-                                    <h4 class="text-center fw-bolder fs-4">Package 2: 10,000/-</h4>
+                                    <h4 class="text-center fw-bolder fs-4">Package 2: <span>10,000</span>/-</h4>
                                     <div class="price_empty_div"></div>
                                     <div class="p-4">
-                                        <p class="fs-3 fw-bold text-success">Mastering your public Speaking</p>
-                                        <p class="zigzag_text_box">Signature Public Speaking and Presentation Bootcamp Workshop <strong class="text-danger">PLUS</strong> a year-long practice session and assignments.</p>
-                                        <p class="zigzag_text_box text-center fw-bold">16 hours+80 hours=96 hours </p>
+                                        <p class="fs-3 fw-bold">Mastering your public Speaking</p>
+                                        <p class="zigzag_text_box">
+                                            Signature Public Speaking and Presentation Bootcamp Workshop PLUS a year-long practice session and assignments.
+                                        </p>
+                                        <p class="zigzag_text_box text-center fw-bold">16 hours+80 hours=96 hours</p>
                                         <ul class="zigzag_text_box">
                                             <li>2 daylong workshop at Basecamp</li>
                                             <li>8 Program Modules</li>
@@ -810,26 +881,28 @@
                                             <li>Certification </li>
                                             <li>Total = 16 hours</li>
                                         </ul>
-                                        <p class="zigzag_text_box text-danger fw-bolder">PLUS</p>
+                                        <p class="zigzag_text_box text-danger fw-bolder">
+                                            PLUS
+                                        </p>
                                         <ul class="zigzag_text_box">
                                             <li>40 sessions distributed in forty different weeks in a year</li>
                                             <li>40 different themes in 40 sessions.</li>
                                             <li>Master Certificate</li>
                                             <li>Total (40x2)= 80 hours</li>
                                         </ul>
+                                       
                                     </div>
                                     <div>
-                                       
-                                      
                                     
-                                        <div id="top_right"></div>
-
-
+                                        {{-- purchase button --}}
+                                        <div id="top_right_2"></div>
+                                      
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+               
                 </div>
             </div>
         </section>
@@ -1003,12 +1076,22 @@
       var toplink = "";
 
       if(token!=null){
-        toplink = `<a href="{{route('payment.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>`;                   
+        toplink = `<a href="{{route('payment.page',1)}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>`;                   
       }else{
         toplink =`<a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Login First</a>`;
       }
 
       $("#top_right").html(toplink);
+
+      var toplink_2 = "";
+
+      if(token!=null){
+        toplink_2 = `<a href="{{route('payment.page',2)}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>`;                   
+      }else{
+        toplink_2 =`<a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Login First</a>`;
+      }
+
+      $("#top_right_2").html(toplink_2);
 
 
     });

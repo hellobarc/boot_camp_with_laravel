@@ -94,18 +94,24 @@ class AuthenticationController extends Controller
             return response()->json($response, 400);
         }
 
-        $data = $request->all();
-        $data['user_id'] = $success['user_id'];
-        $order = Order::create($data);
+        $input =  $request->input();
 
-        $user = Auth::user();
-        $success['token'] = $user->createToken('MyApp')->plainTextToken;
-        $success['name'] = $user->name;
-        $success['user_id'] = $user->id;
+        $user = auth('sanctum')->user();        
+
+       // dd($user);
+           
+
+       $order = Order::create([
+                 'payment_type'=>   $input['payment_type'] ,
+                 'phone'=>   $input['phone'],
+                 'transaction'=>  $input['transaction']  ,
+                 'product_id'=> $input['product_id'],
+                 'user_id'=>   $user->id 
+        ]);
 
         $response = [
             'success' => true,
-            'data' => $success,
+            'data' =>  $order ,
             'message' => 'Order stored Successfully',
         ];
         return response()->json($response, 200);
