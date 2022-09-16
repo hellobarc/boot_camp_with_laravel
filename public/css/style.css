@@ -1,0 +1,481 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+.main_color{
+    color: #f7d63c !important;
+}
+.main_background_color{
+    background-color: #f7d63c !important;
+
+}
+.white_text_color{
+  color: #fff;
+}
+.white_background{
+    background-color: #fff;
+    /* margin-top: 20px; */
+    border-radius: 50%;
+    /* width: 34%; */
+}
+a.nav-link {
+  color: #fff !important;
+  font-size: 25px;
+  font-weight: 700;
+}
+a.nav-link:hover{
+  color: #f7d63c Im !important;
+}
+.navbar-nav{
+  margin-left: 79%;
+}
+.banner{
+  background-color: #222221;
+  color: #fff;
+  /* padding: 50px; */
+  padding-bottom: 50px;
+  padding-top: 20px;
+
+}
+.banner_img{
+    width: 100%;
+    margin-top: 2%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1; 
+
+}
+.banner_btn{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+  background-color: #f7d63c;
+  color: #000;
+  padding: 17px 42px;
+  border-radius: 10px;
+}
+.banner_btn_2{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+  background-color: #fff;
+  color: #000;
+  padding: 17px 30px;
+  border-radius: 10px;
+}
+.banner_btn:hover{
+  color: #000;
+}
+.banner_btn_2:hover{
+  color: #000;
+  background-color: #f7d63c;
+}
+.image_blur{
+  filter: blur(40px);
+    color: #fff;
+    padding: 9% 15%;
+    background-color: #fff;
+    /* width: 50%; */
+    position: absolute;
+    top: 15%;
+    /* z-index: -1; */
+    right: 19%;
+ 
+}
+.discount{
+  position: absolute;
+    left: 51%;
+    bottom: -16%;
+}
+.zigzag_img{
+  width: 100%;
+}
+.zigzag_text_box {
+  font-size: 22px;
+}
+/* before and after css start */
+.before_card{
+  background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
+    outline: none;
+    margin-left: 82px;
+}
+.after_card{
+  background-color: #fff;
+    border-radius: 15px;
+    padding: 50px 43px;
+    box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
+    outline: none;
+}
+.margin_left{
+  margin-right: 100px;
+}
+/* before and after css end */
+/* Why this is for me section css start */
+.for_me_card{
+  background-color: #fff;
+    outline: none;
+    border-radius: 15px;
+    padding: 50px 35px;
+    box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
+    line-height: 41px;
+}
+/* Why this is for me section css end */
+.gallary_image{
+    width: 100%;
+}
+.testimonial{
+  position: relative;
+}
+.testimonial_img{
+  width: 30%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.testimonial_image_background{
+  background-color: #fff;
+    padding: 46px;
+    width: 0;
+    border-radius: 50%;
+    filter: blur(30px);
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+.review{
+  position: relative;
+  background-color: #f6f6f6;
+}
+.review_text{
+  border-radius: 8px;
+  width: 80%;
+}
+.review_text p{
+  font-size: 18px;
+    /* margin: 50px; */
+    padding: 31px;
+}
+.review_empty_div {
+  background-color: #f7d63c;
+    padding: 9px 17px;
+    width: 10px;
+    position: absolute;
+    left: 19%;
+    top: 36%;
+    transform: rotate(152deg);
+}
+.review_empty_div_2 {
+  background-color: #f7d63c;
+    padding: 9px 17px;
+    width: 10px;
+    position: absolute;
+    left: 53%;
+    top: 40%;
+    transform: rotate(152deg);
+}
+.review_empty_div_3 {
+  background-color: #f7d63c;
+    padding: 9px 17px;
+    width: 10px;
+    position: absolute;
+    left: 19%;
+    top: 86%;
+    transform: rotate(152deg);
+}
+.reviews_img{
+  width: 10%;
+  border-radius: 50%;
+}
+.certification{
+  background-color: #f6f6f6;
+}
+.certification_img{
+  width: 100%;
+}
+.about_project_empty_div{
+  background-color: #f7d63c;
+  padding: 80px 4px;
+  margin-right: 40px;
+}
+/* price section css start */
+.price_card{
+  background-color: #fff;
+    border-radius: 15px;
+    outline: none;
+    padding: 30px 20px;
+    box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
+    margin: 0 50px;
+}
+/* price section css end */
+.price_empty_div{
+  padding: 2px 20px;
+  background-color: red;
+  width: 100%;
+}
+.footer_section{
+  background-color: #202020;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer{
+  
+    padding-bottom: 8%;
+}
+.footer_icon{
+  text-align: center;
+    font-size: 30px;
+    margin-top: 28%;
+}
+.footer_icon_1{
+  color: #f7d63c;
+    border: 1px solid #f7d63c;
+    border-radius: 50%;
+    padding: 4px 14px;
+}
+.footer_icon_1:hover{
+  background-color: #f7d63c;
+  color: #000;
+}
+.footer_icon_2{
+  color: #f7d63c;
+    border: 1px solid #f7d63c;
+    border-radius: 50%;
+    padding: 7px 13px;
+    font-size: 28px;
+    margin-left: 34px;
+}
+.footer_icon_2:hover{
+  background-color: #f7d63c;
+  color: #000;
+}
+#overflow{
+  /* position: absolute;
+  
+  z-index: 1 !important;
+  width: 100%;
+  
+  transform: translateZ(0); */
+  position: fixed;
+  left: 0;
+   bottom: 0;
+   width: 100%;
+}
+.close {
+  cursor: pointer;
+    float: right;
+    font-size: 40px;
+    position: absolute;
+    bottom: 23px;
+    right: 80px;
+}
+.collapsible {
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: transparent;
+    color: #000;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: #000;
+    /* font-weight: 800; */
+    float: right;
+    font-size: 30px;
+    margin-left: 5px;
+    /* background-color: #f7d63c; */
+    border-radius: 50%;
+    padding: 0px 14px 0px 15px;
+
+  }
+  .collapsible:hover:after{
+    background-color: #f7d63c;
+  }
+  .active:after {
+    content: "\00d7";
+    /* transform: rotateZ(90deg);
+    transition: 0.s ease-in-out; */
+  }
+  
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+  .collapse_1{
+    border-top: 1px solid #f7d63c;
+    border-bottom: 1px solid #f7d63c;
+    margin-top: 35px;
+  }
+  .collapse_11{
+    border-top: 1px solid #f7d63c;
+    border-bottom: 1px solid #f7d63c;
+  
+  }
+  .collapse_show{
+    display: block !important;
+  }
+  .about_condfidence{
+    background-color: #202020;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .margin_top{
+    margin-top: 37%;
+  }
+  /* login css */
+  .login_page{
+    background-color: #222221;
+    height: 100vh;
+    
+  }
+  .login_right_side{
+    margin-top: 50%;
+  }
+  .form_input{
+    padding: 15px 13px 15px 15px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+    border: 2px solid #f7d63c;
+    font-size: 22px;
+  }
+  .login_button{
+    border: 2px solid #f7d63c;
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+  .login_button:hover{
+    background-color: #f7d63c;
+    color: #000;
+  }
+  /* dropdown */
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  #authUser{
+    cursor: pointer;
+  }
+/* responsive section css start */
+  @media only screen and (max-width: 412px) {
+    .navbar-nav {
+      margin-left: 60%;
+    }
+    .banner{
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .banner_btn_2{
+      margin-bottom: 40px;
+    }
+    .before_card{
+      width: 100%;
+      margin-left: 0;
+    }
+    .after_card{
+      width: 100%;
+      margin-top: 20px;
+    }
+    .margin_left{
+      margin-right: 0;
+    }
+    .review_text{
+      width: 100%;
+      margin-top: 20px;
+    }
+    .review_empty_div{
+      position: absolute;
+      left: 10%;
+      top: 26%;
+    }
+    .review_empty_div_2{
+      position: absolute;
+    left: 9%;
+    top: 57.5%;
+    }
+    .review_empty_div_3{
+      position: absolute;
+    left: 10%;
+    top: 94%;
+    }
+    .about_project_empty_div{
+      padding: 3px 50px;
+    }
+    .price_card{
+      margin: 0 0;
+      margin-top: 20px;
+    }
+    .footer_icon{
+      margin-bottom: 45%;
+      margin-top: 12%;
+    }
+    .close{
+      position: absolute;
+    bottom: 112px;
+    right: 17px;
+    }
+    .discount {
+      position: absolute;
+      left: 77%;
+      bottom: 18%;
+  }
+  
+  .for_me_card{
+    padding: 20px 12px;
+  }
+  }
