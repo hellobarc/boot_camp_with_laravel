@@ -72,6 +72,7 @@
                         phone:$("#phone").val(), 
                         transaction:$("#transaction").val(),
                         product_id: "{{$products->id}}",
+                        status:1
                   },
             dataType: 'json',
             headers: {
@@ -84,7 +85,7 @@
             // localStorage.setItem("token", data.data.token);
             // localStorage.setItem("name", data.data.name);
             // localStorage.getItem("token");
-            window.location.href = "/index";
+            window.location.href = "/";
             },
             error: function(data){
               console.log($data);

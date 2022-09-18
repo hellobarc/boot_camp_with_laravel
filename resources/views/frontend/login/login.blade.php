@@ -16,7 +16,9 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="login_left_side">
-                        <h1 class="text-white fw-bolder">Boot<span class="main_color">camp</span></h1>
+                      <a class="navbar-brand" href="{{route('index')}}" > 
+                        <img src="{{asset('img/Png-yellow.png')}}" alt="" class="logo">
+                      </a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -82,7 +84,7 @@
           localStorage.setItem("token", data.data.token);
           localStorage.setItem("name", data.data.name);
           // localStorage.getItem("token");
-          window.location.href = "/index";
+          window.location.href = "/";
           },
           error: function(data){
             console.log($data);

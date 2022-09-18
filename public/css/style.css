@@ -30,6 +30,12 @@ a.nav-link:hover{
 .navbar-nav{
   margin-left: 79%;
 }
+.logo{
+  width: 20%;
+}
+a.navbar-brand {
+  width: 86%;
+}
 .banner{
   background-color: #222221;
   color: #fff;
@@ -61,7 +67,7 @@ a.nav-link:hover{
   font-weight: 700;
   background-color: #fff;
   color: #000;
-  padding: 17px 30px;
+  padding: 17px 25px;
   border-radius: 10px;
 }
 .banner_btn:hover{
@@ -160,9 +166,19 @@ a.nav-link:hover{
     top: 3%;
     left: 2%;
 }
+.for_me_img{
+  width: 94%;
+  border-radius: 10px;
+}
+.video{
+  width: 100%;
+    height: 380px;
+    border-radius: 10px;
+}
 .review{
   position: relative;
   background-color: #f6f6f6;
+  margin: 40px 0;
 }
 .review_text{
   border-radius: 8px;
@@ -178,8 +194,8 @@ a.nav-link:hover{
     padding: 9px 17px;
     width: 10px;
     position: absolute;
-    left: 19%;
-    top: 36%;
+    left: 18%;
+    top: 34%;
     transform: rotate(152deg);
 }
 .review_empty_div_2 {
@@ -188,7 +204,7 @@ a.nav-link:hover{
     width: 10px;
     position: absolute;
     left: 53%;
-    top: 40%;
+    top: 38%;
     transform: rotate(152deg);
 }
 .review_empty_div_3 {
@@ -196,8 +212,17 @@ a.nav-link:hover{
     padding: 9px 17px;
     width: 10px;
     position: absolute;
-    left: 19%;
+    left: 18%;
     top: 86%;
+    transform: rotate(152deg);
+}
+.review_empty_div_4 {
+  background-color: #f7d63c;
+    padding: 9px 17px;
+    width: 10px;
+    position: absolute;
+    left: 52%;
+    top: 78%;
     transform: rotate(152deg);
 }
 .reviews_img{
@@ -206,16 +231,40 @@ a.nav-link:hover{
 }
 .certification{
   background-color: #f6f6f6;
+  margin: 70px 0;
 }
 .certification_img{
   width: 100%;
+  border-radius: 10px;
+}
+.subscribtion{
+  background-color: #f7d63c;
+  padding-top: 30px;
+    padding-bottom: 100px;
+}
+.subcription_form_input{
+  width: 100%;
+    padding: 14px 10px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+.subcription_button{
+  background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 13px 10px;
+    font-size: 22px;
+}
+.subcription_button:hover{
+  background-color: transparent;
+  color: #000;
 }
 .about_project_empty_div{
   background-color: #f7d63c;
-    padding: 108px 4px;
+    padding: 108px 2px;
     margin-right: 40px;
     position: absolute;
-    margin-top: 24px;
+    margin-top: 12px;
 }
 /* price section css start */
 .price_card{
@@ -243,9 +292,9 @@ a.nav-link:hover{
     padding-bottom: 8%;
 }
 .footer_icon{
-  text-align: center;
+  text-align: right;
     font-size: 30px;
-    margin-top: 28%;
+    margin-top: 42%;
 }
 .footer_icon_1{
   color: #f7d63c;
@@ -280,6 +329,7 @@ a.nav-link:hover{
   left: 0;
    bottom: 0;
    width: 100%;
+   z-index: 1;
 }
 .close {
   cursor: pointer;
@@ -354,9 +404,10 @@ a.nav-link:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 30px;
   }
   .margin_top{
-    margin-top: 37%;
+    margin-top: 47%;
   }
   /* login css */
   .login_page{
@@ -365,7 +416,7 @@ a.nav-link:hover{
     
   }
   .login_right_side{
-    margin-top: 50%;
+    margin-top: 16%;
   }
   .form_input{
     padding: 15px 13px 15px 15px;
@@ -429,12 +480,19 @@ a.nav-link:hover{
   }
 /* responsive section css start */
   @media only screen and (max-width: 412px) {
+    .navbar-light .navbar-toggler{
+      margin-left: 81%;
+      background-color: #fff;
+    }
     .navbar-nav {
       margin-left: 60%;
     }
     .banner{
       padding-right: 10px;
       padding-left: 10px;
+    }
+    .logo{
+      width: 28%;
     }
     .banner_btn_2{
       margin-bottom: 40px;
@@ -447,6 +505,9 @@ a.nav-link:hover{
       width: 100%;
       margin-top: 20px;
     }
+    .before_after_ul{
+      margin-right: 42px;
+    }
     .margin_left{
       margin-right: 0;
     }
@@ -457,20 +518,34 @@ a.nav-link:hover{
     .review_empty_div{
       position: absolute;
       left: 10%;
-      top: 26%;
+      top: 20%;
     }
     .review_empty_div_2{
       position: absolute;
     left: 9%;
-    top: 57.5%;
+    top: 43.5%;
     }
     .review_empty_div_3{
       position: absolute;
     left: 10%;
-    top: 94%;
+    top: 72.5%;
+    }
+    .review_empty_div_4{
+      position: absolute;
+    left: 10%;
+    top: 95%;
+    }
+    .subcription_button{
+      margin-top: 20px;
+      width: 100%;
     }
     .about_project_empty_div{
-      padding: 3px 50px;
+      padding: 10px 50px;
+      margin-top: 33px;
+    }
+    .for_me_img{
+      margin-bottom: 20px;
+      width: 100%;
     }
     .price_card{
       margin: 0 0;
@@ -482,7 +557,7 @@ a.nav-link:hover{
     }
     .close{
       position: absolute;
-    bottom: 112px;
+    bottom: 100px;
     right: 17px;
     }
     .discount {

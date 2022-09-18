@@ -52,5 +52,21 @@ class ViewController extends Controller
        $orders =  Order::create($input);
 
     }
+    public function paymentHistory(Request $request)
+    {
+        $orders = Order::where('user_id', 15)->get();
+        return view('frontend.order.user_order', compact('orders'));
+    }
+    public function discountEmail (Request $request)
+    {
+
+        dd($request->all);
+
+        $discount_email = new discount_order();
+        $discount_email->discount_email = $request->discount_email;
+
+        $discount_email->save();
+        return redirect()->route('frontend.promoCode');
+    }
 
 }

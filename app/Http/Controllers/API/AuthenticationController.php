@@ -106,7 +106,8 @@ class AuthenticationController extends Controller
                  'phone'=>   $input['phone'],
                  'transaction'=>  $input['transaction']  ,
                  'product_id'=> $input['product_id'],
-                 'user_id'=>   $user->id 
+                 'user_id'=>   $user->id, 
+                 'status'=>    $input['status']
         ]);
 
         $response = [
