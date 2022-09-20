@@ -21,8 +21,7 @@ Route::get('/', [App\Http\Controllers\ViewController::class, 'index'])->name('in
 Route::get('/login/page', [App\Http\Controllers\ViewController::class, 'loginPage'])->name('login.page');
 Route::get('/register/page', [App\Http\Controllers\ViewController::class, 'registerPage'])->name('registeration.page');
 Route::get('/payment/page/{id?}', [App\Http\Controllers\ViewController::class, 'payment'])->name('payment.page');
-Route::get('/payment-history', [App\Http\Controllers\ViewController::class, 'paymentHistory'])->name('payment.history');
-Route::post('/discount', [App\Http\Controllers\PirceDiscountController::class, 'discountEmail'])->name('discount');
+Route::get('/payment-history_2', [App\Http\Controllers\ViewController::class, 'paymentHistory_2'])->name('payment.history.2');
 
 Route::controller(AuthController::class)->group(function(){
     Route::post('login', 'login')->name('login');

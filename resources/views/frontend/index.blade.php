@@ -39,11 +39,12 @@
      echo  $mytoken;
     @endphp
     <main>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" style="background-color: #222221">
-                <div class="container">
-                    {{-- <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"> --}}
+        <header style="background-color: #222221" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+                        
                             <a class="navbar-brand" href="#" > 
                                 <img src="{{asset('img/Png-yellow.png')}}" alt="" class="logo">
                             </a>
@@ -65,17 +66,18 @@
                                         <span id="authUser" style=" color: #fff; font-size: 22px;"></span>
                                         <span id="icon" style="color: #fff; font-size: 22px;"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
                                         <div class="dropdown-content">
-                                            <a href="{{ route('payment.history') }}" style="font-size: 17px;">Purchase History</a>
+                                            <a href="{{ route('payment.history.2') }}" style="font-size: 17px;">Purchase History</a>
                                             <form action="#" method="post" id="logoutRoute">
                                                 <button style="border: none; text-align:center; font-size: 17px;">Logout</button>
                                             </form>
                                         </div>
                                     </div>
                             </div>
-                        {{-- </div>
-                    </div> --}}
+                                    
+                        </nav>
+                    </div>
                 </div>
-              </nav>
+            </div>
         </header>
         <!-- banner section start -->
         <section class="banner">
@@ -244,7 +246,7 @@
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div class="mt-4">
-                                    <img src="{{asset('img/gallary_4.png')}}" alt="" class="gallary_image">
+                                    <img src="{{asset('img/gallary_4.jpg')}}" alt="" class="gallary_image">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -411,7 +413,7 @@
                                                     <span class="about_project_empty_div"></span>
                                                 {{-- </span> --}}
                                                 {{-- <span class="display-1 ml-3">4</span> <span>years</span> --}}
-                                                <strong class="fs-4 fw-bold" style="margin-left: 37px;">To stand out in the workplace</strong>
+                                                <strong class="fs-4 fw-bold" style="margin-left: 21px;">To stand out in the workplace</strong>
                                                 <p class="fs-5" style="margin-top: 20px; margin-left: 40px;">You only have one chance to make a first impression. Speaking confidently and consistently with conviction, strengthen your leadership skills and get noticed at interview, your desk and the board room.</p>
                                             </div>
                                         </div> 
@@ -444,7 +446,7 @@
                                             <div class="mt-4">
                                                 <span class="about_project_empty_div"></span>
                                                 {{-- <span class="display-1 ml-3">4</span> <span>years</span> --}}
-                                                <strong class="fs-4 ml-2 fw-bold" style="margin-left: 37px;">Becoming a creative speaker</strong>
+                                                <strong class="fs-4 ml-2 fw-bold" style="margin-left: 34px;">Becoming a creative speaker</strong>
                                                 <p class="fs-5" style="margin-top: 20px; margin-left: 40px;">This bootcamp will help you tap into your deepest ideas and emotions to uncover a story that connects and persuades your audience. Simple storytelling framework that you can employ in any situation even if you think you are not a good storyteller. You will learn strategies to deliver your presentation with impact and leave your audience hungry for more.</p>
                                             </div>
                                         </div> 
@@ -471,13 +473,18 @@
                                 The cues to read your audience for maximum impact and give the impression that your message is personalized for each listener.  <br><br>
                                 You can use learning style analysis and insights to stay on topic and convey your message to all types of learners in the room. <br><br>
                                 The precise steps to closing a presentation that inspires enthusiasm and applause from your audience.
-
                             </p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
-                        <div>
-                            <img src="" alt="" class="zigzag_img">
+                        <div class="mt-5">
+                            <img src="{{asset('img/1.jpg')}}" alt="" class="game_changing_img_1">
+                        </div>
+                        {{-- <div class="mt-4">
+                            <img src="{{asset('img/2.jpg')}}" alt="" class="game_changing_img_2">
+                        </div> --}}
+                        <div class="mt-5">
+                            <img src="{{asset('img/3.jpg')}}" alt="" class="game_changing_img_2">
                         </div>
                     </div>
                 </div>
@@ -586,7 +593,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="testimonial">
                             <div>
-                                <img src="{{asset('img/man_1.jpg')}}" alt="" class="testimonial_img">
+                                <img src="{{asset('img/doctor.png')}}" alt="" class="testimonial_img">
                             </div>
                             <div class="testimonial_image_background"></div>
                             <h3 class="white_text_color my-3">Doctors</h3>
@@ -596,7 +603,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="testimonial">
                             <div>
-                                <img src="{{asset('img/man_2.jpg')}}" alt="" class="testimonial_img">
+                                <img src="{{asset('img/business_owner.png')}}" alt="" class="testimonial_img">
                             </div>
                             <div class="testimonial_image_background"></div>
                             <h3 class="white_text_color my-3">Business owners</h3>
@@ -608,7 +615,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="testimonial">
                             <div>
-                                <img src="{{asset('img/man_3.jpg')}}" alt="" class="testimonial_img">
+                                <img src="{{asset('img/enter.png')}}" alt="" class="testimonial_img">
                             </div>
                             <div class="testimonial_image_background"></div>
                             <h3 class="white_text_color my-3">Entrepreneurs</h3>
@@ -620,7 +627,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="testimonial mt-3">
                             <div>
-                                <img src="{{asset('img/man_1.jpg')}}" alt="" class="testimonial_img">
+                                <img src="{{asset('img/teacher.png')}}" alt="" class="testimonial_img">
                             </div>
                             <div class="testimonial_image_background"></div>
                             <h3 class="white_text_color my-3">Teachers</h3>
@@ -631,7 +638,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="testimonial mt-3">
                             <div>
-                                <img src="{{asset('img/man_2.jpg')}}" alt="" class="testimonial_img">
+                                <img src="{{asset('img/laywer.png')}}" alt="" class="testimonial_img">
                             </div>
                             <div class="testimonial_image_background"></div>
                             <h3 class="white_text_color my-3">lawyers</h3>
@@ -642,7 +649,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="testimonial mt-3">
                             <div>
-                                <img src="{{asset('img/man_3.jpg')}}" alt="" class="testimonial_img">
+                                <img src="{{asset('img/engineer.png')}}" alt="" class="testimonial_img">
                             </div>
                             <div class="testimonial_image_background"></div>
                             <h3 class="white_text_color my-3">Engineers</h3>
@@ -669,7 +676,7 @@
                             </div>
                             <div class="review_empty_div"></div>
                             <div>
-                                <img src="{{asset('img/reviews_1.jpg')}}" alt="" class="reviews_img"> 
+                                <img src="{{asset('img/review_2.png')}}" alt="" class="reviews_img"> 
                                 <span class="fs-5 fw-bold ">SM Walid Habib</span>
                             </div>
                         </div>
@@ -681,7 +688,7 @@
                             </div>
                             <div class="review_empty_div_2"></div>
                             <div>
-                                <img src="{{asset('img/reviews_2.jpg')}}" alt="" class="reviews_img">
+                                <img src="{{asset('img/reviews_1.png')}}" alt="" class="reviews_img">
                                 <span class="fs-5 fw-bold ">Farzana Tuli</span>
                             </div>
                         </div>
@@ -695,7 +702,7 @@
                             </div>
                             <div class="review_empty_div_3"></div>
                             <div>
-                                <img src="{{asset('img/reviews_3.jpg')}}" alt="" class="reviews_img">
+                                <img src="{{asset('img/review_3.jpg')}}" alt="" class="reviews_img">
                                 <span class="fs-5 fw-bold ">Tariq Rahman</span>
                             </div>
                         </div>
@@ -707,7 +714,7 @@
                             </div>
                             <div class="review_empty_div_4"></div>
                             <div>
-                                <img src="{{asset('img/reviews_3.jpg')}}" alt="" class="reviews_img">
+                                <img src="{{asset('img/review_4.jpg')}}" alt="" class="reviews_img">
                                 <span class="fs-5 fw-bold ">Tanvir Ahmed</span>
                             </div>
                         </div>
@@ -745,22 +752,21 @@
                             <p class="fs-4 mt-3">Course price with the discount: <strong>BDT 7,500</strong> <span class="text-decoration-line-through">15,000 BDT</span></p>
                         </div>
                         <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div>
-                                    <form action="{{route('discount')}}" method="post" enctype="multipart/form-data">
-                                        @csrf
+                            <form action="#" method="post" id="discount_form">
+                                @csrf
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div>
                                         <div class="form-group">
-                                          <input type="email" class="subcription_form_input" id="" name="discount_email" aria-describedby="emailHelp" placeholder="mail@example.com">
+                                            <input type="email" class="subcription_form_input" id="discount_email" name="discount_email" aria-describedby="emailHelp" placeholder="mail@example.com">
                                         </div>
-                                        <div class="form-group">
-                                            <input type="submit" class="subcription_button" value="Sign up & get discount">
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    
-                            </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="submit" class="subcription_button" value="Sign up & get discount">
+                                    </div> 
+                                </div>
+                            </form> 
                         </div>
                     </div>
                 </div>
@@ -993,7 +999,7 @@
 
     </main>
 
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
@@ -1072,7 +1078,7 @@
         var token = localStorage.getItem("token");
 
 
-// alert(localStorage.getItem("token"));
+        // alert(localStorage.getItem("token"));
 
       $("#logoutRoute").submit(function(e){
 
@@ -1093,7 +1099,12 @@
                     localStorage.removeItem("token");
                     localStorage.removeItem("name");
                     // localStorage.getItem("token");
-                      window.location.href = "/";
+                    Swal.fire(
+                        'Good job!',
+                        'Your Logout Successfully',
+                        'success'
+                        )
+                                window.location.href = "/";
                     $("#authUser").hide();
                     $("#loginLi").show();
 
@@ -1130,8 +1141,53 @@
 
     });
 </script>
-<script>
+        <script>
+             $(document).ready(function(){
 
-</script>
+            var token = localStorage.getItem("token");
+
+
+// alert(localStorage.getItem("token"));
+
+    $("#discount_form").submit(function(e){
+
+        e.preventDefault();
+
+
+        $.ajax({
+                type:'POST',
+                url:"{{route('discount')}}",
+                data:{"action":"discount", discount_email:$("#discount_email").val()},
+                dataType: 'json',
+                headers: {
+                    // "Authorization": "Bearer "+token,
+                    "Accept": "application/json"
+                },
+                success: function(data){		
+
+                    // localStorage.removeItem("token");
+                    // localStorage.removeItem("name");
+                    // localStorage.getItem("token");
+                    Swal.fire(
+                        'Good job!',
+                        'Your Discount is granted',
+                        'success'
+                        )
+                        window.location.href = "/register/page";
+
+                },
+                error: function(data){
+                    console.log(data);
+                }
+            });
+
+        return false;
+        });
+
+
+
+
+            });
+        </script>
   </body>
 </html>

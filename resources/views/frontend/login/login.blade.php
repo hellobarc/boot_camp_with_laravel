@@ -63,6 +63,7 @@
     -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $(document).ready(function(){
 
@@ -84,6 +85,11 @@
           localStorage.setItem("token", data.data.token);
           localStorage.setItem("name", data.data.name);
           // localStorage.getItem("token");
+          Swal.fire(
+            'Good job!',
+            'Your Login Successfully',
+            'success'
+            )
           window.location.href = "/";
           },
           error: function(data){

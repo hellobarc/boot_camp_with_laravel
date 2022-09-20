@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Models\Order;
+use App\Models\Products;
+use App\Models\discount_order;
 use Auth;
 use Illuminate\Support\Facades\Validator;
 class AuthenticationController extends Controller
@@ -118,4 +120,75 @@ class AuthenticationController extends Controller
         return response()->json($response, 200);
 
     }
+
+    public function discountEmail(Request $request)
+    {
+
+        $validation = Validator::make($request->all(),[
+            'discount_email' => 'required|email',
+        ]);
+
+        if( $validation->fails())
+        {
+            $response = [
+                'success' => false,
+                'message' => $validation->errors(),
+            ];
+            
+            return response()->json($response, 400);
+        }
+
+        $data = $request->all();
+        $order = discount_order::create($data);
+       
+
+        $response = [
+            'success' => true,
+            'message' => 'Your email send Successfully',
+        ];
+        return response()->json($response, 200);
+    }
+
+
+    public function userInfo(Request $request)
+    {
+        $user = auth('sanctum')->user();
+        $success['user_id'] = $user->email;
+        
+        $response = [
+            'success' => true,
+            'data' => $success,
+            'message' => 'User Login Successfully',
+        ];
+        return response()->json($response, 200);
+    }
+    public function is_exist(Request $request)
+    {
+        $user = auth('sanctum')->user();
+        $user_email = $user->email;
+        $discountEmail = discount_order::where('discount_email', $user_email)->count();
+       
+        
+        $response = [
+            'success' => true,
+            'discount' => $discountEmail,
+            'message' => 'User Login Successfully',
+        ];
+        return response()->json($response, 200);
+    }
+
+    public function paymentHistory(Request $request)
+    {
+        $user = auth('sanctum')->user();
+        $user_id = $user->id;
+        $products =  Order::where('user_id', $user_id)->get();
+
+        $response = [
+            'success' => 200,
+            'discount' => $products,
+            'message' => 'user purchase',
+        ];
+        return response()->json($response, 200);
+    }
+    
 }

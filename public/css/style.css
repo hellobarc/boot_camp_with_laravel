@@ -34,14 +34,14 @@ a.nav-link:hover{
   width: 20%;
 }
 a.navbar-brand {
-  width: 86%;
+  width: 65%;
 }
 .banner{
   background-color: #222221;
   color: #fff;
   /* padding: 50px; */
   padding-bottom: 50px;
-  padding-top: 20px;
+  padding-top: 5%;
 
 }
 .banner_img{
@@ -84,15 +84,24 @@ a.navbar-brand {
     background-color: #fff;
     /* width: 50%; */
     position: absolute;
-    top: 23%;
+    top: 36%;
     /* z-index: -1; */
-    right: 25%;
+    right: 23%;
  
 }
 .discount{
   position: absolute;
     left: 51%;
     bottom: -16%;
+}
+.game_changing_img_1{
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 30%;
+}
+.game_changing_img_2{
+  width: 100%;
+  border-radius: 10px;
 }
 .zigzag_img{
   width: 100%;
@@ -280,6 +289,10 @@ a.navbar-brand {
   padding: 2px 20px;
   background-color: red;
   width: 100%;
+}
+.payment_step{
+  color: #f7d63c;
+  font-size: 22px;
 }
 .footer_section{
   background-color: #202020;
@@ -511,29 +524,25 @@ a.navbar-brand {
     .margin_left{
       margin-right: 0;
     }
-    .review_text{
-      width: 100%;
-      margin-top: 20px;
-    }
     .review_empty_div{
       position: absolute;
       left: 10%;
-      top: 20%;
+      top: 20.5%;
     }
     .review_empty_div_2{
       position: absolute;
     left: 9%;
-    top: 43.5%;
+    top: 45%;
     }
     .review_empty_div_3{
       position: absolute;
     left: 10%;
-    top: 72.5%;
+    top: 73%;
     }
     .review_empty_div_4{
       position: absolute;
     left: 10%;
-    top: 95%;
+    top: 95.5%;
     }
     .subcription_button{
       margin-top: 20px;
@@ -568,5 +577,8 @@ a.navbar-brand {
   
   .for_me_card{
     padding: 20px 12px;
+  }
+  .game_changing_img_1{
+    margin-top: 0;
   }
   }

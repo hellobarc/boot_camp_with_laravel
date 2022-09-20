@@ -23,41 +23,10 @@
                     <div class="card">
                         <div class="card-body">
                             <h3>Purchase History</h3>
-                            <table class="table table-bordered table-striped">
-                                <thead class="thead-dark">
-                                  <tr>
-                                    <th scope="col">Sl No</th>
-                                    <th scope="col">Product Name</th>
-                                    <th scope="col">Payment Type</th>
-                                    <th scope="col">Transaction ID</th>
-                                    <th scope="col">Action</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ( $orders as $order)
-                                    <tr>
-                                        <th scope="row">{{$loop->index + 1 }}</th>
-                                        <td class="text-dark">
-                                            @if($order->product_id == 1)
-                                                <strong>Package 1</strong>
-                                            @else
-                                                <strong>Package 2</strong>
-                                            @endif
-                                        </td>
-                                        <td>{{ $order->payment_type }}</td>
-                                        <td>{{ $order->transaction }}</td>
-                                        <td>
-                                            @if($order->status == 1)
-                                            <strong>Pending</strong>
-                                        @else
-                                            <strong>Success</strong>
-                                        @endif
-                                        </td>
-                                      </tr>
-                                    @endforeach
-                                  
-                                </tbody>
-                              </table>
+
+                            <div id="table_data"></div>
+
+                          
                               <a class="fs-4 text-decoration-none text-dark fw-bold float-right" href="{{ route('index')}}">Go Back Home</a>
                         </div>
                     </div>
@@ -110,5 +79,76 @@
       });
     });
 </script> --}}
+
+<script>
+  $(document).ready(function(){
+  var token = localStorage.getItem("token");
+    // alert(localStorage.getItem("token"));
+
+      $.ajax({
+        type:'GET',
+        url:"{{route('payment.history')}}",
+        data:{"action":"payment.history"},
+        dataType: 'json',
+        headers: {
+          "Authorization": "Bearer "+token,
+          "Accept": "application/json"
+        },
+        success: function(data){		
+          console.log(data);
+
+          let table = `<table class="table table-bordered table-striped">`;
+              table +=  `<thead class="thead-dark">
+                                  <tr>
+                                    <th scope="col">Sl No</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Payment Type</th>
+                                    <th scope="col">Transaction ID</th>
+                                    <th scope="col">Action</th>
+                                  </tr>
+                                </thead>`;
+
+          $.each(data.discount, function(i, item) {
+
+              let package = 1;
+              let status = 1;
+
+              if(item.product_id==1){
+                package = 1;
+              }else{
+                package = 2;
+              }
+
+              if(item.status==1){
+                status = "Pending";
+              }else{
+                status = "Success";
+              }
+
+              table += `<tr>
+                              <th scope="row">${i}</th>
+                              <td class="text-dark">
+                                  Package- ${package}
+                              </td>
+                              <td>${item.payment_type}</td>
+                              <td>${item.transaction}</td>
+                              <td>
+                                ${status}
+                              </td>
+                            </tr>`;
+          });
+                table += `</table>`;
+
+           $("#table_data").html(table);     
+        
+        },
+        error: function(data){
+          console.log(data);
+        }
+        
+      });
+    
+  });
+</script>
   </body>
 </html>

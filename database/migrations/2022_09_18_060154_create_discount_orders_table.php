@@ -16,11 +16,6 @@ class CreateDiscountOrdersTable extends Migration
         Schema::create('discount_orders', function (Blueprint $table) {
             $table->id();
             $table->string('discount_email')->unique();
-            $table->string('promo_code')->nullable();
-            $table->integer('phone')->nullable();
-            $table->integer('product_id')->nullable();
-            $table->string('transaction')->nullable();
-            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

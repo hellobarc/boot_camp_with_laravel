@@ -11,10 +11,6 @@ class discount_order extends Model
     
     protected $fillable = [
         'discount_email',
-        'promo_code',
-        'phone',
-        'product_id',
-        'transaction',
-        'status',
+        
     ];
 }
