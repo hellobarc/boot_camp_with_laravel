@@ -491,6 +491,19 @@ a.navbar-brand {
   #authUser{
     cursor: pointer;
   }
+  .dashboard_left{
+    text-align: right;
+    margin-top: 50px;
+  }
+  .dashboard_left li{
+    list-style: none;
+    margin: 20px 0;
+  }
+  .dashboard_left a{
+    text-decoration: none;
+    font-size: 22px;
+    color: #000;
+  }
 /* responsive section css start */
   @media only screen and (max-width: 412px) {
     .navbar-light .navbar-toggler{

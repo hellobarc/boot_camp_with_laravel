@@ -751,9 +751,10 @@
                             <h1 class="display-3 fw-bold mt-5">Sign up and get a 50% discount</h1>
                             <p class="fs-4 mt-3">Course price with the discount: <strong>BDT 7,500</strong> <span class="text-decoration-line-through">15,000 BDT</span></p>
                         </div>
-                        <div class="row">
+                        
                             <form action="#" method="post" id="discount_form">
                                 @csrf
+                                <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <div>
                                         <div class="form-group">
@@ -766,8 +767,9 @@
                                         <input type="submit" class="subcription_button" value="Sign up & get discount">
                                     </div> 
                                 </div>
+                            </div>
                             </form> 
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -820,7 +822,7 @@
                         <div class="">
                             <div class="price_card">
                                 <div class="">
-                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Pro: 7500/-</h4>
+                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Pro: 15,000/-</h4>
                                     <div class="price_empty_div"></div>
                                     <div class="p-4">
                                         <p class="fs-3 fw-bold">Know all the tools</p>
@@ -901,7 +903,7 @@
                         <div class="">
                             <div class="price_card">
                                 <div class="">
-                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Max: <span>10,000</span>/-</h4>
+                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Max: <span>20,000</span>/-</h4>
                                     <div class="price_empty_div"></div>
                                     <div class="p-4">
                                         <p class="fs-3 fw-bold">Mastering your public Speaking</p>
@@ -1018,7 +1020,7 @@
     </script>
         <script>
             // Set the date we're counting down to
-            var countDownDate = new Date("oct 5, 2022 23:59:59").getTime();
+            var countDownDate = new Date("nov 5, 2022 23:59:59").getTime();
             
             // Update the count down every 1 second
             var x = setInterval(function() {

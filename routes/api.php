@@ -29,4 +29,6 @@ Route::controller(AuthenticationController::class)->group(function(){
     Route::get('user-info', 'userInfo')->name('user_info');
     Route::get('discount-email', 'is_exist')->name('discount_email');
     Route::get('payment-history', 'paymentHistory')->name('payment.history');
+
+    Route::post('in', 'nothing')->name('no');
 });

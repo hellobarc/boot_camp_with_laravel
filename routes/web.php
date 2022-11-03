@@ -28,3 +28,12 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('register', 'register');
     Route::post('logout', 'logout');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin-dashboard', [App\Http\Controllers\ViewController::class, 'adminDashboard'])->name('admin.dashboard');
+Route::get('/admin-dashboard-user', [App\Http\Controllers\ViewController::class, 'adminDashboardUser'])->name('admin.dashboard.user');
+Route::get('/admin-dashboard-purchase', [App\Http\Controllers\ViewController::class, 'adminDashboardPurchase'])->name('admin.dashboard.purchase');
+
+Route::match(['GET', 'POST'], '/admin-login', [App\Http\Controllers\ViewController::class, 'login'])->name('login.control');
+

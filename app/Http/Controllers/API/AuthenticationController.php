@@ -10,9 +10,13 @@ use App\Models\Order;
 use App\Models\Products;
 use App\Models\discount_order;
 use Auth;
+use Mail;
+use App\Mail\RegistrationMail;
+use App\Mail\PurchaseMail;
 use Illuminate\Support\Facades\Validator;
 class AuthenticationController extends Controller
 {
+    
     public function register(Request $request)
     {
         $validation = Validator::make($request->all(),[
@@ -20,6 +24,8 @@ class AuthenticationController extends Controller
             'email' => 'required|email',
             'password'=> 'required',
             'confirm_password' => 'required|same:password',
+            'phone' => 'required|max:11',
+            'address' => 'required',
         ]);
 
         if( $validation->fails())
@@ -37,6 +43,24 @@ class AuthenticationController extends Controller
         $user = User::create($data);
         $success['token'] = $user->createToken('MyApp')->plainTextToken;
         $success['name'] = $user->name;
+        //registration mail start
+        $registration_info = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+         ];
+        $anthoer_email = 
+                    [
+                        $user_email = $request->email,
+                        'minar.barc@gmail.com',
+                        'tanvir1.barc@gmail.com',
+                    ];
+                    
+                    foreach($anthoer_email as $email){
+                        $registrationMail = Mail::to($email)->send(new RegistrationMail($registration_info,"Bootcamp Registration mail"));
+                    }
+        //registration mail end
 
         $response = [
             'success' => true,
@@ -99,9 +123,27 @@ class AuthenticationController extends Controller
         $input =  $request->input();
 
         $user = auth('sanctum')->user();        
-
+        $user_id = $user->id;
        // dd($user);
-           
+       $fetch_user1 = User::where('id', $user_id)->first();
+       $fetch_user = [
+        'name' => $fetch_user1->name,
+        'email' => $fetch_user1->email,
+        'phone' => $fetch_user1->phone,
+        'address' => $fetch_user1->address,
+        // 'payment_type' => 1,
+        // 'transaction'=>  1  ,
+        // 'product_id'=> 1,
+        // 'name' => $fetch_user1->name,
+        // 'email' => $fetch_user1->email,
+        // 'phone' => $fetch_user1->phone,
+        // 'address' => $fetch_user1->address,
+        'payment_type' => $input['payment_type'],
+        'transaction'=>  $input['transaction']  ,
+        'product_id'=> $input['product_id'],
+
+     ];
+    //    dd($fetch_user);
 
        $order = Order::create([
                  'payment_type'=>   $input['payment_type'] ,
@@ -111,6 +153,22 @@ class AuthenticationController extends Controller
                  'user_id'=>   $user->id, 
                  'status'=>    $input['status']
         ]);
+
+        //oder mail start
+       
+        
+        $anthoe_email = 
+                    [
+                        $user_email = $fetch_user1->email,
+                        'minar.barc@gmail.com',
+                        'tanvir1.barc@gmail.com',
+                        'mail2barc@yahoo.com',
+                    ];
+                    
+                    foreach($anthoe_email as $email){
+                        $purchaseMail = Mail::to($email)->send(new PurchaseMail($fetch_user,"Bootcamp Purchase mail"));
+                    }
+        //oder mail end
 
         $response = [
             'success' => true,

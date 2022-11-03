@@ -32,6 +32,12 @@
                               <div class="mb-3">
                                 <input type="email" name="email" id="email" aria-describedby="emailHelp" class="form_input" placeholder="Enter your email">
                               </div>
+                              <div class="mb-3">
+                                <input type="text" name="phone" id="phone" class="form_input" placeholder="Enter your phone number">
+                              </div>
+                              <div class="mb-3">
+                                <input type="text" name="address" id="address" class="form_input" placeholder="Enter your address">
+                              </div>
                               <div class="mb-3">                                
                                 <input type="password" name="password" id="password" class="form_input" placeholder="Enter your password">
                               </div>
@@ -80,7 +86,7 @@
         $.ajax({
                 type:'POST',
                 url:"{{route('registrationAuth')}}",
-                data:{"action":"registration", name:$("#name").val(),email:$("#email").val(), password:$("#password").val(), confirm_password:$("#confirm_password").val()},
+                data:{"action":"registration", name:$("#name").val(),email:$("#email").val(), password:$("#password").val(), confirm_password:$("#confirm_password").val(), phone:$("#phone").val(), address:$("#address").val()},
                 dataType: 'json',
                 headers: {
                     // "Authorization": "Bearer "+token,
