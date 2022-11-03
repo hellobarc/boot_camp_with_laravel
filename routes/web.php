@@ -31,9 +31,13 @@ Route::controller(AuthController::class)->group(function(){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['admin'])->group(function(){
 Route::get('/admin-dashboard', [App\Http\Controllers\ViewController::class, 'adminDashboard'])->name('admin.dashboard');
 Route::get('/admin-dashboard-user', [App\Http\Controllers\ViewController::class, 'adminDashboardUser'])->name('admin.dashboard.user');
 Route::get('/admin-dashboard-purchase', [App\Http\Controllers\ViewController::class, 'adminDashboardPurchase'])->name('admin.dashboard.purchase');
-
+Route::post('/admin-dashboard-purchase-submit/{id}', [App\Http\Controllers\ViewController::class, 'adminDashboardPurchaseSubmit'])->name('admin.dashboard.purchase.submit');
+Route::post('/admin-logout', [App\Http\Controllers\ViewController::class, 'destroy'])->name('admin.logout');
+});
 Route::match(['GET', 'POST'], '/admin-login', [App\Http\Controllers\ViewController::class, 'login'])->name('login.control');
 

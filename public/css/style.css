@@ -492,8 +492,16 @@ a.navbar-brand {
     cursor: pointer;
   }
   .dashboard_left{
-    text-align: right;
-    margin-top: 50px;
+    /* text-align: center; */
+    margin-top: 49%;
+    /* border: 1px solid #000; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
+    background-position: center !important;
+    padding: 9px 45px 34px 46px;
+    font-weight: 700;
   }
   .dashboard_left li{
     list-style: none;
@@ -503,6 +511,53 @@ a.navbar-brand {
     text-decoration: none;
     font-size: 22px;
     color: #000;
+  }
+  .dashboard_left button{
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .all_user_table{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
+    background-position: center !important;
+    padding: 9px 45px 34px 46px;
+  }
+  .dashboard_right{
+    text-align: right;
+    margin-top: 4%;
+    margin-bottom: 60px;
+    cursor: pointer;
+  }
+  .dashboard_table{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
+    background-position: center !important;
+    padding: 30px 45px 34px 46px;
+  }
+  .admin_login{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
+    background-position: center !important;
+    padding: 30px 45px 34px 46px;
+    width: 50%;
+    margin-left: 24%;
+    margin-top: 20%;
+  }
+
+  .admin_login input{
+   display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+    height: 41px;
+    padding: 0 10px;
   }
 /* responsive section css start */
   @media only screen and (max-width: 412px) {

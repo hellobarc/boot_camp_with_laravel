@@ -9,6 +9,8 @@ use App\Models\Products;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Session;
+use Mail;
+use App\Mail\PurchaseConfirmationMail;
 class ViewController extends Controller
 {
     /**
@@ -70,7 +72,8 @@ class ViewController extends Controller
             $password = Hash::make($request->password);
             $users = User::where('email', 'minar.barc@gmail.com')->first();
            
-            // $session = Session::set('user_data', $users);
+            $session = session()->put('user_data', $users);
+            // dd(session()->get('user_data')->name);
             if($users->email == $email){
                 return redirect()->route('admin.dashboard');
             }
@@ -84,23 +87,41 @@ class ViewController extends Controller
     }
     public function adminDashboard(Request $request)
     {
-        return view('admin.dashboard');
+        $users = User::all();
+        $user_count = $users->count();
+        $orders = Order::where('status', 2)->count();
+        return view('admin.dashboard', compact('user_count', 'orders'));
     }
     public function adminDashboardUser(Request $request)
     {
         $users = User::get();
-        // dd($users);
+        
         return view('admin.all_user', compact('users'));
     }
     public function adminDashboardPurchase(Request $request)
     {
         $orders = Order::with('user')->get();
         // dd($orders);
-        // foreach($orders as $order)
-        // {
-        //     $user_name = User::where('id',)
-        // }
         return view('admin.all_purchase', compact('orders'));
+    }
+    public function adminDashboardPurchaseSubmit(Request $request, $id)
+    {
+        $order = Order::updateOrCreate([
+            'user_id' => $id,
+        ],
+        [
+            'status' => $request->input('purchase_status'),
+        ]);
+        $fetch_user = User::where('id', $id)->first();
+        $user_email = $fetch_user->email;
+        $fetch_order = Order::where('user_id', $id)->first();
+        $purchaseMail = Mail::to($user_email)->send(new PurchaseConfirmationMail($fetch_order,"Bootcamp Purchase Confirmation mail"));
+        return redirect()->back();
+    }
+    public function destroy(Request $request)
+    {
+        $request->session()->flush();
+        return redirect()->route('login.control');
     }
 
 }
