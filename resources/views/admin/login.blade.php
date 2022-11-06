@@ -18,8 +18,8 @@
                     <div class="admin_login">
                         <form action="{{route('login.control')}}" method="POST">
                             @csrf
-                            <input type="email" name="email" placeholder="enter your email" required>
-                            <input type="password" name="password" placeholder="enter your password" required>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                            <input type="password" name="password" placeholder="Enter your password" required>
                             <input type="submit" value="Login" class="fw-bold">
                         </form>
                     </div>

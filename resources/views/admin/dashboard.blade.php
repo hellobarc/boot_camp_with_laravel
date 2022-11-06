@@ -14,7 +14,14 @@
     <section style="background-color: #cdcdc7; height: 100vh;" >
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <div class="dashboard_right">
+                        <strong>{{session()->get('user_data')->name}}</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-lg-2 col-sm-4 col-xs-12">
                    <div class="dashboard_left">
                         <ul>
                             <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
@@ -29,24 +36,25 @@
                         </ul>
                    </div>
                 </div>
-                <div class="col-md-9">
-                    <div class="dashboard_right">
-                        <strong>{{session()->get('user_data')->name}}</strong>
-                    </div>
+                <div class="col-md-9 col-lg-9 col-sm-8 col-xs-12">
                     <div class="dashboard_table">
                         <h1 class="mb-4">Admin Dashbord</h1>
-                        <table class="table table-bordered table-striped text-center">
-                            <thead>
-                                <th>Total User</th>
-                                <th>Total Purchase</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>{{$user_count}}</td>
-                                    <td>{{$orders}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center">
+                                <thead>
+                                    <th>Total User</th>
+                                    <th>Total Purchase</th>
+                                    <th>Total Pending Purchase</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{$user_count}}</td>
+                                        <td>{{$orders}}</td>
+                                        <td>{{$pending_orders}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                    
                 </div>
