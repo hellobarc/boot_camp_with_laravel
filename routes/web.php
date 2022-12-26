@@ -22,6 +22,8 @@ Route::get('/login/page', [App\Http\Controllers\ViewController::class, 'loginPag
 Route::get('/register/page', [App\Http\Controllers\ViewController::class, 'registerPage'])->name('registeration.page');
 Route::get('/payment/page/{id?}', [App\Http\Controllers\ViewController::class, 'payment'])->name('payment.page');
 Route::get('/payment-history_2', [App\Http\Controllers\ViewController::class, 'paymentHistory_2'])->name('payment.history.2');
+Route::post('/contact-with-us', [App\Http\Controllers\ViewController::class, 'contactWithUs'])->name('contact.with.us');
+
 
 Route::controller(AuthController::class)->group(function(){
     Route::post('login', 'login')->name('login');

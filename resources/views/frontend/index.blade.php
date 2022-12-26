@@ -28,15 +28,18 @@
 
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    {{-- owl carousal --}}
+    <link rel="stylesheet" href="{{asset('owlcarousel/dist/assets/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('owlcarousel/dist/assets/owl.theme.default.min.css')}}">
     <!-- main CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
   </head>
   <body>
     @php
-             $token = "<script>document.writeln(localStorage.getItem('token'))</script>";
-              session('token',  $token);
-     $mytoken = session('token');
-     echo  $mytoken;
+        $token = "<script>document.writeln(localStorage.getItem('token'))</script>";
+        session('token',  $token);
+        $mytoken = session('token');
+        echo  $mytoken;
     @endphp
     <main>
         <header style="background-color: #222221" class="">
@@ -150,6 +153,162 @@
             </div>
         </section>
         <!-- banner section end -->
+        <!-- about the project section start -->
+        <section class="my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div>
+                            <h1 class="display-3 fw-bolder mb-5 text-center">About the project</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                        <div>
+                            <p class="fs-4">Public Speaking Bootcamp. It's a two-day intensive training session consisting of 5-star class outing. This workshop is perfect for anyone who wants to improve their public speaking skills or make a career change into the world of public speaking. We guarantee that you'll be more confident and comfortable after attending this course.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
+                </div>
+            </div>
+        </section>
+        <!-- about the project section end -->
+        {{-- price table section start --}}
+        <section class="my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
+                        <div class="">
+                            <div class="price_card">
+                                <div class="">
+                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Pro: 15,000/-</h4>
+                                    <div class="price_empty_div"></div>
+                                    <div class="p-4">
+                                        <p class="fs-3 fw-bold">Know all the tools</p>
+                                        <p class="zigzag_text_box">Signature Public Speaking and Presentation Bootcamp Workshop</p>
+                                        <p class="zigzag_text_box text-center fw-bold mt-5">16-hour long session </p>
+                                        <ul class="zigzag_text_box">
+                                            <li>2 daylong workshops at Basecamp</li>
+                                            <li>8 Program Modules</li>
+                                            <li>30 Video Lessons</li>
+                                            <li>100 pages Workbook & Handouts</li>
+                                            <li>20 Hands-On Activities</li>
+                                            <li>24/7 Access to Our Private Facebook Group</li>
+                                            <li>2 Assessments</li>
+                                            <li>Certification </li>
+                                            <li>Total = 16 hours</li>
+                                        </ul>
+                                    </div>
+                                    <div class="margin_top">
+                                        <div id="top_right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- @foreach ($products as $product)
+                        <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
+                            <div class="">
+                                <div class="price_card">
+                                    <div class="">
+                                        <h4 class="text-center fw-bolder fs-4">{{ $product->product_name }}: <span>{{ $product->product_price }}</span>/-</h4>
+                                        <div class="price_empty_div"></div>
+                                        <div class="p-4">
+                                            <p class="fs-3 fw-bold">{{ $product->product_title }}</p>
+                                            <p class="zigzag_text_box">
+                                                {{ $product->short_desc }}
+                                            </p>
+                                            <p class="zigzag_text_box text-center fw-bold">{{ $product->time }}</p>
+                                            <ul class="zigzag_text_box">
+                                                {!! $product->long_desc !!}
+                                            </ul>
+                                            <p class="zigzag_text_box text-danger fw-bolder">
+                                                @if($product->extra_2 == Null)
+                                                    <p></p>
+                                                @else
+                                                    {{ $product->extra_2 }}
+                                                @endif
+                                            </p>
+                                            <ul class="zigzag_text_box">
+                                                @if($product->extra == Null)
+                                                <p></p>
+                                                @else
+                                                    {!! $product->extra !!}
+                                                @endif
+                                            </ul>
+                                        
+                                        </div>
+                                        <div> --}}
+                                        
+                                            {{-- purchase button --}}
+                                            {{-- <div id="top_right"></div> --}}
+                                            {{-- {{$mytoken}}
+                                        @if ( $mytoken == "null" || $mytoken == null)
+                                        <a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>
+                                        @else
+                                       
+                                        <a href="{{ route('payment.page', $product->id) }}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>   
+                                        @endif
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach --}}
+                   
+                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
+                        <div class="">
+                            <div class="price_card">
+                                <div class="">
+                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Max: <span>20,000</span>/-</h4>
+                                    <div class="price_empty_div"></div>
+                                    <div class="p-4">
+                                        <p class="fs-3 fw-bold">Mastering your public Speaking</p>
+                                        <p class="zigzag_text_box">
+                                            Signature Public Speaking and Presentation Bootcamp Workshop <strong class="text-danger">PLUS</strong> a year-long practice session and assignments.
+                                        </p>
+                                        <p class="zigzag_text_box text-center fw-bold">16 hours+80 hours=96 hours</p>
+                                        <ul class="zigzag_text_box">
+                                            <li>2 daylong workshop at Basecamp</li>
+                                            <li>8 Program Modules</li>
+                                            <li>30 Video Lessons</li>
+                                            <li>100 pages Workbook & Handouts</li>
+                                            <li>20 Hands-On Activities</li>
+                                            <li>24/7 Access to Our Private Facebook Group</li>
+                                            <li>2 Assessments</li>
+                                            <li>Certification </li>
+                                            <li>Total = 16 hours</li>
+                                        </ul>
+                                        <p class="zigzag_text_box text-danger fw-bolder">
+                                            PLUS
+                                        </p>
+                                        <ul class="zigzag_text_box">
+                                            <li>40 sessions distributed in forty different weeks in a year</li>
+                                            <li>40 different themes in 40 sessions.</li>
+                                            <li>Master Certificate</li>
+                                            <li>Total (40x2)= 80 hours</li>
+                                        </ul>
+                                       
+                                    </div>
+                                    <div>
+                                    
+                                        {{-- purchase button --}}
+                                        <div id="top_right_2"></div>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+                </div>
+            </div>
+        </section>
+        {{-- price table section end --}}
         <section>
             <div class="container">
                 <div class="row">
@@ -161,62 +320,38 @@
                 </div>
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="row">
-                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                <div style="margin-top: 15px;"><span class="display-3 fw-bolder">1.</span></div>
+                        <div class="d-flex justify-content-start">
+                            <div style="margin-top: 15px;"><span class="display-3 fw-bolder" style="border: 2px solid #000; padding: 0px 20px;">1</span></div>
+                            <div class="mx-3 mt-5">
+                                <span class="fs-5">Craft a <strong>powerful message</strong>.</span>
                             </div>
-                            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                <div class="mt-4">
-                                    <span class="fs-5">Crafting a concise, <strong>powerful message</strong> using your own personal stories</span>
-                                </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-4">
+                            <div style="margin-top: 15px;"><span class="display-3 fw-bolder"  style="border: 2px solid #000; padding: 0px 20px;">2</span></div>
+                            <div class="mx-3 mt-4">
+                                <span class="fs-5">Build your <strong>influential presence</strong>.</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="row">
-                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                <div style="margin-top: 15px;"><span class="display-3 fw-bolder">2.</span></div>
+                        <div class="d-flex justify-content-start">
+                            <div style="margin-top: 15px;"><span class="display-3 fw-bolder" style="border: 2px solid #000; padding: 0px 20px;">3</span></div>
+                            <div class="mx-3 mt-5">
+                                <span class="fs-5">Create an easy structure.</span>
                             </div>
-                            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                <div class="mt-4">
-                                    <span class="fs-5">Calming your nerves and adding <strong>power to your voice</strong> </span>
-                                </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-4">
+                            <div style="margin-top: 15px;"><span class="display-3 fw-bolder" style="border: 2px solid #000; padding: 0px 20px;">4</span></div>
+                            <div class="mx-3 mt-3">
+                                <span class="fs-5">Calm your nerves and add <strong>power to your voice</strong> </span>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="row">
-                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                <div style="margin-top: 15px;"><span class="display-3 fw-bolder">3.</span></div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                <div class="mt-4">
-                                    <span class="fs-5">Building and enhancing your <strong>influential presence</strong></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="row">
-                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                <div style="margin-top: 15px;"><span class="display-3 fw-bolder">4.</span></div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                <div class="mt-4">
-                                    <span class="fs-5">Creating an easy and repeatable structure for preparation and practice</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="row">
-                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                <div style="margin-top: 15px;"><span class="display-3 fw-bolder">5.</span></div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                <div class="mt-4">
-                                    <span class="fs-5">Using engaging nonverbal delivery methods</span>
-                                </div>
+                        <div class="d-flex justify-content-between">
+                            <div style="margin-top: 15px;"><span class="display-3 fw-bolder" style="border: 2px solid #000; padding: 0px 20px;">5</span></div>
+                            <div class="mx-3 mt-3">
+                                <span class="fs-5">Use engaging nonverbal delivery methods (body language)</span>
                             </div>
                         </div>
                     </div>
@@ -751,52 +886,36 @@
                             <h1 class="display-3 fw-bold mt-5">Sign up and get a 50% discount</h1>
                             <p class="fs-4 mt-3">Course price with the discount: <strong>BDT 7,500</strong> <span class="text-decoration-line-through">15,000 BDT</span></p>
                         </div>
-                        
+                           
                             <form action="#" method="post" id="discount_form">
                                 @csrf
                                 <div class="row">
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div>
-                                        <div class="form-group">
-                                            <input type="email" class="subcription_form_input" id="discount_email" name="discount_email" aria-describedby="emailHelp" placeholder="mail@example.com">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div>
+                                            <div class="form-group">
+                                                <input type="email" class="subcription_form_input" id="discount_email" name="discount_email" aria-describedby="emailHelp" placeholder="mail@example.com">
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="submit" class="subcription_button" value="Sign up & get discount">
+                                        </div> 
+                                    </div>
                                 </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <input type="submit" class="subcription_button" value="Sign up & get discount">
-                                    </div> 
-                                </div>
+                            </form>
+                         
+                            <div class="mt-4">
+                                <h2 class="fw-bolder">Or</h2>
+                                <h3>Call This number book your set : +88 01617-302010</h3>
                             </div>
-                            </form> 
-                       
+                           
                     </div>
                 </div>
             </div>
         </section>
         <!-- subscribtion section end -->
-        <!-- about the project section start -->
-        <section class="my-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div>
-                            <h1 class="display-3 fw-bolder mb-5 text-center">About the project</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
-                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                        <div>
-                            <p class="fs-4">Public Speaking Bootcamp. It's a two-day intensive training session consisting of 5-star class outing. This workshop is perfect for anyone who wants to improve their public speaking skills or make a career change into the world of public speaking. We guarantee that you'll be more confident and comfortable after attending this course.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
-                </div>
-            </div>
-        </section>
-        <!-- about the project section end -->
+
         <!-- FAQ section start -->
         {{-- <section>
             <div class="container">
@@ -814,160 +933,98 @@
             </div>
         </section> --}}
         <!-- FAQ section end -->
-        {{-- price table section start --}}
-        <section class="my-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
-                        <div class="">
-                            <div class="price_card">
-                                <div class="">
-                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Pro: 15,000/-</h4>
-                                    <div class="price_empty_div"></div>
-                                    <div class="p-4">
-                                        <p class="fs-3 fw-bold">Know all the tools</p>
-                                        <p class="zigzag_text_box">Signature Public Speaking and Presentation Bootcamp Workshop</p>
-                                        <p class="zigzag_text_box text-center fw-bold mt-5">16-hour long session </p>
-                                        <ul class="zigzag_text_box">
-                                            <li>2 daylong workshops at Basecamp</li>
-                                            <li>8 Program Modules</li>
-                                            <li>30 Video Lessons</li>
-                                            <li>100 pages Workbook & Handouts</li>
-                                            <li>20 Hands-On Activities</li>
-                                            <li>24/7 Access to Our Private Facebook Group</li>
-                                            <li>2 Assessments</li>
-                                            <li>Certification </li>
-                                            <li>Total = 16 hours</li>
-                                        </ul>
-                                    </div>
-                                    <div class="margin_top">
-                                        <div id="top_right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- @foreach ($products as $product)
-                        <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
-                            <div class="">
-                                <div class="price_card">
-                                    <div class="">
-                                        <h4 class="text-center fw-bolder fs-4">{{ $product->product_name }}: <span>{{ $product->product_price }}</span>/-</h4>
-                                        <div class="price_empty_div"></div>
-                                        <div class="p-4">
-                                            <p class="fs-3 fw-bold">{{ $product->product_title }}</p>
-                                            <p class="zigzag_text_box">
-                                                {{ $product->short_desc }}
-                                            </p>
-                                            <p class="zigzag_text_box text-center fw-bold">{{ $product->time }}</p>
-                                            <ul class="zigzag_text_box">
-                                                {!! $product->long_desc !!}
-                                            </ul>
-                                            <p class="zigzag_text_box text-danger fw-bolder">
-                                                @if($product->extra_2 == Null)
-                                                    <p></p>
-                                                @else
-                                                    {{ $product->extra_2 }}
-                                                @endif
-                                            </p>
-                                            <ul class="zigzag_text_box">
-                                                @if($product->extra == Null)
-                                                <p></p>
-                                                @else
-                                                    {!! $product->extra !!}
-                                                @endif
-                                            </ul>
-                                        
-                                        </div>
-                                        <div> --}}
-                                        
-                                            {{-- purchase button --}}
-                                            {{-- <div id="top_right"></div> --}}
-                                            {{-- {{$mytoken}}
-                                        @if ( $mytoken == "null" || $mytoken == null)
-                                        <a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>
-                                        @else
-                                       
-                                        <a href="{{ route('payment.page', $product->id) }}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>   
-                                        @endif
-                                            
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach --}}
-                   
-                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
-                        <div class="">
-                            <div class="price_card">
-                                <div class="">
-                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Max: <span>20,000</span>/-</h4>
-                                    <div class="price_empty_div"></div>
-                                    <div class="p-4">
-                                        <p class="fs-3 fw-bold">Mastering your public Speaking</p>
-                                        <p class="zigzag_text_box">
-                                            Signature Public Speaking and Presentation Bootcamp Workshop <strong class="text-danger">PLUS</strong> a year-long practice session and assignments.
-                                        </p>
-                                        <p class="zigzag_text_box text-center fw-bold">16 hours+80 hours=96 hours</p>
-                                        <ul class="zigzag_text_box">
-                                            <li>2 daylong workshop at Basecamp</li>
-                                            <li>8 Program Modules</li>
-                                            <li>30 Video Lessons</li>
-                                            <li>100 pages Workbook & Handouts</li>
-                                            <li>20 Hands-On Activities</li>
-                                            <li>24/7 Access to Our Private Facebook Group</li>
-                                            <li>2 Assessments</li>
-                                            <li>Certification </li>
-                                            <li>Total = 16 hours</li>
-                                        </ul>
-                                        <p class="zigzag_text_box text-danger fw-bolder">
-                                            PLUS
-                                        </p>
-                                        <ul class="zigzag_text_box">
-                                            <li>40 sessions distributed in forty different weeks in a year</li>
-                                            <li>40 different themes in 40 sessions.</li>
-                                            <li>Master Certificate</li>
-                                            <li>Total (40x2)= 80 hours</li>
-                                        </ul>
-                                       
-                                    </div>
-                                    <div>
-                                    
-                                        {{-- purchase button --}}
-                                        <div id="top_right_2"></div>
-                                      
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               
+        
+        {{-- owll carousal gallary start --}}
+        <section class="carousel_class">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/1.jpg')}}" alt="">
                 </div>
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/2.jpg')}}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/3.jpg')}}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/4.jpg')}}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/5.jpg')}}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/6.jpg')}}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/7.jpg')}}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/8.jpg')}}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/9.jpg')}}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{asset('img/bootcamp_gallary/10.jpg')}}" alt="">
+                </div>
+                
             </div>
         </section>
-        {{-- price table section end --}}
+        {{-- owll carousal gallary end --}}
         <!-- footer section start -->
         <section class="footer_section">
             <div class="container">
                <div class="footer">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
                             <div class="main_color px-5 pt-5">
                                 <p class="fs-4 fw-bold">PROFESSIONAL COURSE FOR <br> PUBLIC SPEAKING</p>
                                 <h1 class="display-4 fw-bold">BECOME <br> A PRO</h1>
                                 <p class="">Bespoke English Spoken Course to <br> Transform You from Average to Pro</p>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
                             <div class="footer_icon">
                                 <a href="#" class="footer_icon_1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 <a href="#" class="footer_icon_2"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                             </div>
                         </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            @include('frontend.flash-message')
+                            <div>
+                                <form action="{{route('contact.with.us')}}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="form-group">
+                                      <label for="email">Email address</label>
+                                      <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="contact">Contact Number</label>
+                                      <input type="text" name="contact" class="form-control" id="contact" placeholder="Enter your contact number">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="email">Your Message</label>
+                                      <textarea name="user_message" id="" cols="30" rows="5" class="form-control" placeholder="Write your message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn main_background_color px-4 fw-bold mt-3">Submit</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                </div>
+            </div>
+            <div class="sticky-container">
+                <ul class="sticky">
+                    <li>
+                        <img src="img/phone.png" width="32" height="32">
+                        <p>+88 01617-302010</p>
+                    </li>
+                    {{-- <li class="mt-3">
+                        <img src="img/gmail.png" width="32" height="32">
+                        <p><a href="#" target="_blank">headoffice@hellobarc.com</a></p>
+                    </li> --}}
+                    
+                </ul>
             </div>
         </section>
         <!-- footer section end -->
@@ -1000,7 +1057,30 @@
         <!-- overflow section end -->
 
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="owlcarousel/dist/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:0,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:4
+                    }
+                }
+            })
+        });
+    
+    
+    </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         var coll = document.getElementsByClassName("collapsible");
@@ -1018,178 +1098,175 @@
           });
         }
     </script>
-        <script>
-            // Set the date we're counting down to
-            var countDownDate = new Date("nov 5, 2022 23:59:59").getTime();
-            
-            // Update the count down every 1 second
-            var x = setInterval(function() {
-            
-              // Get today's date and time
-              var now = new Date().getTime();
-            
-              // Find the distance between now and the count down date
-              var distance = countDownDate - now;
-            
-              // Time calculations for days, hours, minutes and seconds
-              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-              // Display the result in the element with id="demo"
-              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-              + minutes + "m " + seconds + "s ";
-            
-              // If the count down is finished, write some text
-              if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-              }
-            }, 1000);
-        </script>
-            <script>
-                var closebtns = document.getElementsByClassName("close");
-                var i;
-                
-                for (i = 0; i < closebtns.length; i++) {
-                  closebtns[i].addEventListener("click", function() {
-                    this.parentElement.style.display = 'none';
-                  });
-                }
-            </script>
-          
-            <script>
-                $(document).ready(function () {
-                    $("#authUser").html(localStorage.getItem('name'));
-              
-                if(localStorage.getItem("token") != null){
-                    $("#authUser").show();
-                    $("#loginLi").hide();
-                }else{
-                    $("#authUser").hide();
-                    $("#icon").hide();
-                    $("#loginLi").show();
-                }
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("nov 5, 2022 23:59:59").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+            // Get today's date and time
+            var now = new Date().getTime();
+        
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+        
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+        
+            // If the count down is finished, write some text
+            if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    <script>
+        var closebtns = document.getElementsByClassName("close");
+        var i;
+        
+        for (i = 0; i < closebtns.length; i++) {
+            closebtns[i].addEventListener("click", function() {
+            this.parentElement.style.display = 'none';
             });
-            </script>
+        }
+    </script>
+          
+    <script>
+        $(document).ready(function () {
+            $("#authUser").html(localStorage.getItem('name'));
+        
+            if(localStorage.getItem("token") != null){
+                $("#authUser").show();
+                $("#loginLi").hide();
+            }else{
+                $("#authUser").hide();
+                $("#icon").hide();
+                $("#loginLi").show();
+            }
+        });
+    </script>
 
-<script>
-    $(document).ready(function(){
+    <script>
+        $(document).ready(function(){
+
+            var token = localStorage.getItem("token");
+
+
+            // alert(localStorage.getItem("token"));
+
+        $("#logoutRoute").submit(function(e){
+
+            e.preventDefault();
+        
+
+            $.ajax({
+                    type:'POST',
+                    url:"{{route('logoutAuth')}}",
+                    data:{"action":"logout", },
+                    dataType: 'json',
+                    headers: {
+                        "Authorization": "Bearer "+token,
+                        "Accept": "application/json"
+                    },
+                    success: function(data){		
+
+                        localStorage.removeItem("token");
+                        localStorage.removeItem("name");
+                        // localStorage.getItem("token");
+                        Swal.fire(
+                            'Good job!',
+                            'Your Logout Successfully',
+                            'success'
+                            )
+                                    window.location.href = "/";
+                        $("#authUser").hide();
+                        $("#loginLi").show();
+
+                    },
+                    error: function(data){
+                        console.log($data);
+                    }
+                });
+
+            return false;
+        });
+
+
+        var toplink = "";
+
+        if(token!=null){
+            toplink = `<a href="{{route('payment.page',1)}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>`;                   
+        }else{
+            toplink =`<a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Buy Now</a>`;
+        }
+
+        $("#top_right").html(toplink);
+
+        var toplink_2 = "";
+
+        if(token!=null){
+            toplink_2 = `<a href="{{route('payment.page',2)}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>`;                   
+        }else{
+            toplink_2 =`<a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Buy Now</a>`;
+        }
+
+        $("#top_right_2").html(toplink_2);
+
+
+        });
+    </script>
+    <script>
+            $(document).ready(function(){
 
         var token = localStorage.getItem("token");
 
 
         // alert(localStorage.getItem("token"));
 
-      $("#logoutRoute").submit(function(e){
+        $("#discount_form").submit(function(e){
 
-        e.preventDefault();
-      
+            e.preventDefault();
 
-        $.ajax({
-                type:'POST',
-                url:"{{route('logoutAuth')}}",
-                data:{"action":"logout", },
-                dataType: 'json',
-                headers: {
-                    "Authorization": "Bearer "+token,
-                    "Accept": "application/json"
-                },
-                success: function(data){		
 
-                    localStorage.removeItem("token");
-                    localStorage.removeItem("name");
-                    // localStorage.getItem("token");
-                    Swal.fire(
-                        'Good job!',
-                        'Your Logout Successfully',
-                        'success'
-                        )
-                                window.location.href = "/";
-                    $("#authUser").hide();
-                    $("#loginLi").show();
+                $.ajax({
+                    type:'POST',
+                    url:"{{route('discount')}}",
+                    data:{"action":"discount", discount_email:$("#discount_email").val()},
+                    dataType: 'json',
+                    headers: {
+                        // "Authorization": "Bearer "+token,
+                        "Accept": "application/json"
+                    },
+                    success: function(data){		
 
-                },
-                error: function(data){
-                    console.log($data);
-                }
+                        // localStorage.removeItem("token");
+                        // localStorage.removeItem("name");
+                        // localStorage.getItem("token");
+                        Swal.fire(
+                            'Good job!',
+                            'Your Discount is granted',
+                            'success'
+                            )
+                            window.location.href = "/register/page";
+
+                    },
+                    error: function(data){
+                        console.log(data);
+                    }
+                });
+
+                return false;
             });
 
-        return false;
-      });
-
-
-      var toplink = "";
-
-      if(token!=null){
-        toplink = `<a href="{{route('payment.page',1)}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>`;                   
-      }else{
-        toplink =`<a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Buy Now</a>`;
-      }
-
-      $("#top_right").html(toplink);
-
-      var toplink_2 = "";
-
-      if(token!=null){
-        toplink_2 = `<a href="{{route('payment.page',2)}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>`;                   
-      }else{
-        toplink_2 =`<a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Buy Now</a>`;
-      }
-
-      $("#top_right_2").html(toplink_2);
-
-
-    });
-</script>
-        <script>
-             $(document).ready(function(){
-
-            var token = localStorage.getItem("token");
-
-
-// alert(localStorage.getItem("token"));
-
-    $("#discount_form").submit(function(e){
-
-        e.preventDefault();
-
-
-        $.ajax({
-                type:'POST',
-                url:"{{route('discount')}}",
-                data:{"action":"discount", discount_email:$("#discount_email").val()},
-                dataType: 'json',
-                headers: {
-                    // "Authorization": "Bearer "+token,
-                    "Accept": "application/json"
-                },
-                success: function(data){		
-
-                    // localStorage.removeItem("token");
-                    // localStorage.removeItem("name");
-                    // localStorage.getItem("token");
-                    Swal.fire(
-                        'Good job!',
-                        'Your Discount is granted',
-                        'success'
-                        )
-                        window.location.href = "/register/page";
-
-                },
-                error: function(data){
-                    console.log(data);
-                }
-            });
-
-        return false;
         });
-
-
-
-
-            });
-        </script>
+    </script>
   </body>
 </html>

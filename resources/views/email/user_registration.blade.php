@@ -76,44 +76,18 @@
               </td>
             </tr> -->
             <tr>
-              <td style="padding:35px 30px 11px 30px;font-size:0;background-color:#ffffff;border-bottom:1px solid #f0f0f5;border-color:rgba(201,201,207,.35);">
-                <!--[if mso]>
-                <table role="presentation" width="100%">
-                <tr>
-                <td style="width:145px;" align="left" valign="top">
-                <![endif]-->
-                <div class="col-sml" style="display:inline-block;width:100%;max-width:145px;vertical-align:top;text-align:left;font-family:Arial,sans-serif;font-size:14px;color:#363636;">
-                  <!-- <img src="https://assets.codepen.io/210284/icon.png" width="115" alt="" style="width:115px;max-width:80%;margin-bottom:20px;"> -->
-                  <p style="font-size: 30px; line-height: 50px;"><span style="font-weight: 700;">User Name:</span> <br>{{ $registration_info['name'] }}</p>
-                </div>
-                <!--[if mso]>
-                </td>
-                <td style="width:395px;padding-bottom:20px;" valign="top">
-                <![endif]-->
-                <div class="col-lge" style="display:inline-block;width:100%;max-width:395px;vertical-align:top;padding-bottom:20px;font-family:Arial,sans-serif;font-size:16px;line-height:22px;color:#363636;">
-                  <p style="font-size: 20px; font-weight: 700; margin-top: 45px;">User Info</p>
-                  <!--<p>Name</p>-->
+              <td style="padding:10px 30px 11px 30px;font-size:0;background-color:#ffffff;border-bottom:1px solid #f0f0f5;border-color:rgba(201,201,207,.35);">
+               
+                <p style="font-size: 30px; line-height: 50px;"><span style="font-weight: 700;">User Name:</span> {{ $registration_info['name'] }}</p>
+                    <p style="font-size: 25px; font-weight:700">Email : {{ $registration_info['email'] }}</p>
+                    <p style="font-size: 25px; font-weight:700">Phone: {{ $registration_info['phone'] }}</p>
+                    <p style="font-size: 25px; font-weight:700">Address: {{ $registration_info['address'] }}</p>
+                    <hr>
+                    <p style="font-size: 20px; font-weight:700">Regarding Any issues please call the number</p>
+                    <p style="font-size: 20px; font-weight:700">+88 01617-302010</p>
                  
-                  <p>Billing Email : {{ $registration_info['email'] }}</p>
-                  <p>Phone: {{ $registration_info['phone'] }}</p>
-                  <p>Address: {{ $registration_info['address'] }}</p>
-                 
-                  <p style="margin:0;"><a href="#" style="background: #f7d63c; text-decoration: none; padding: 10px 25px; color: #ffffff; border-radius: 4px; display:inline-block; mso-padding-alt:0;text-underline-color:#ff3884"><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:20pt">&nbsp;</i><![endif]--><span style="mso-text-raise:10pt;font-weight:bold;">Regarding Any issues please call the number</span><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i><![endif]--></a></p>
-                    <p style="font-size: 25px; font-weight:700">+88 01617-302010</p>
-                 
-                </div>
-                <!--[if mso]>
-                </td>
-                </tr>
-                </table>
-                <![endif]-->
               </td>
             </tr>
-            {{-- <tr>
-              <td style="padding:30px;font-size:24px;line-height:28px;font-weight:bold;background-color:#ffffff;border-bottom:1px solid #f0f0f5;border-color:rgba(201,201,207,.35);">
-                  <p style="font-size:25px; font-weight: 700;">Price: {{ $purchase_info[0]['price'] }} {{ $purchase_info[0]['currency'] }}</p>
-              </td>
-            </tr> --}}
             <tr>
               <td style="padding:30px;background-color:#ffffff;">
                 <p style="margin:0; font-size: 22px; text-align: center; color: #ff3884; letter-spacing: 3px;">Thank you</p>

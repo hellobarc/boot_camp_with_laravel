@@ -8,10 +8,12 @@ use App\Models\Order;
 use App\Models\Products;
 use App\Models\User;
 use App\Models\Admin;
+use App\Models\UserContactList;
 use Illuminate\Support\Facades\Hash;
 use Session;
 use Mail;
 use App\Mail\PurchaseConfirmationMail;
+
 class ViewController extends Controller
 {
     /**
@@ -63,7 +65,25 @@ class ViewController extends Controller
         $orders = Order::where('user_id', 15)->get();
         return view('frontend.order.user_order', compact('orders'));
     }
-    
+    public function contactWithUs(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'contact' => 'required|min:11',
+            'user_message' => 'nullable|string',
+ 
+        ],
+        [
+            'email.required' => 'Please enter a vaild email address',
+            'contact.required' => 'Please Provide valid phone number',        
+        ]);
+        UserContactList::insert([
+            'email' => $request->email,
+            'contact' => $request->contact,
+            'user_message' => $request->user_message,
+        ]);
+        return redirect()->back()->with('success', 'We will connect with you soon');
+    }
     
 
 }
