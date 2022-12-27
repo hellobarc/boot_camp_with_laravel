@@ -54,7 +54,7 @@
                                     <th>Action</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ( $orders as $rows)
+                                    @foreach ($orders as $rows)
                                     <tr>
                                         <td>{{$loop->index + 1}}</td>
                                         <td>{{$rows->user->name}}</td>

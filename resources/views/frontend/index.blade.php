@@ -151,164 +151,64 @@
                     </div>
                 </div>
             </div>
+            <div class="sticky_icon">
+                <nav>
+                    <ul>
+                      <li><a><i class="fa fa-phone" aria-hidden="true"></i><span>+88 01617-302010</span></a></li>
+                      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a></li>
+                      <li><a href="https://www.youtube.com/channel/UCz-y-XgBAzD99Ao7IeeFBJg" target="_blank"><i class="fa fa-youtube"></i><span>Youtube</span></a></li>
+                    </ul>
+                  </nav>
+            </div>
         </section>
         <!-- banner section end -->
-        <!-- about the project section start -->
-        <section class="my-5">
+        {{-- price details section start --}}
+        <section class="mt-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div>
-                            <h1 class="display-3 fw-bolder mb-5 text-center">About the project</h1>
-                        </div>
+                {{-- <div class="row">
+                    <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12">
+                        <h1 class="fw-bolder">About Bootcamp</h1>
                     </div>
-                </div>
+                </div> --}}
                 <div class="row">
-                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
-                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                        <div>
-                            <p class="fs-4">Public Speaking Bootcamp. It's a two-day intensive training session consisting of 5-star class outing. This workshop is perfect for anyone who wants to improve their public speaking skills or make a career change into the world of public speaking. We guarantee that you'll be more confident and comfortable after attending this course.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
-                </div>
-            </div>
-        </section>
-        <!-- about the project section end -->
-        {{-- price table section start --}}
-        <section class="my-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
-                        <div class="">
-                            <div class="price_card">
-                                <div class="">
-                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Pro: 15,000/-</h4>
-                                    <div class="price_empty_div"></div>
-                                    <div class="p-4">
-                                        <p class="fs-3 fw-bold">Know all the tools</p>
-                                        <p class="zigzag_text_box">Signature Public Speaking and Presentation Bootcamp Workshop</p>
-                                        <p class="zigzag_text_box text-center fw-bold mt-5">16-hour long session </p>
-                                        <ul class="zigzag_text_box">
-                                            <li>2 daylong workshops at Basecamp</li>
-                                            <li>8 Program Modules</li>
-                                            <li>30 Video Lessons</li>
-                                            <li>100 pages Workbook & Handouts</li>
-                                            <li>20 Hands-On Activities</li>
-                                            <li>24/7 Access to Our Private Facebook Group</li>
-                                            <li>2 Assessments</li>
-                                            <li>Certification </li>
-                                            <li>Total = 16 hours</li>
-                                        </ul>
-                                    </div>
-                                    <div class="margin_top">
-                                        <div id="top_right"></div>
-                                    </div>
-                                </div>
+                    <div class="col-lg-5 col-xl-5 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="price_details">
+                            <h2 class="text-center fw-bolder mb-3">Bootcamp Pro</h2>
+                            <div>
+                                <img src="{{asset('img/bootcamp_max.jpg')}}" alt="" style="width: 100%; border-radius:5px;">
                             </div>
-                        </div>
-                    </div>
-                    {{-- @foreach ($products as $product)
-                        <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
-                            <div class="">
-                                <div class="price_card">
-                                    <div class="">
-                                        <h4 class="text-center fw-bolder fs-4">{{ $product->product_name }}: <span>{{ $product->product_price }}</span>/-</h4>
-                                        <div class="price_empty_div"></div>
-                                        <div class="p-4">
-                                            <p class="fs-3 fw-bold">{{ $product->product_title }}</p>
-                                            <p class="zigzag_text_box">
-                                                {{ $product->short_desc }}
-                                            </p>
-                                            <p class="zigzag_text_box text-center fw-bold">{{ $product->time }}</p>
-                                            <ul class="zigzag_text_box">
-                                                {!! $product->long_desc !!}
-                                            </ul>
-                                            <p class="zigzag_text_box text-danger fw-bolder">
-                                                @if($product->extra_2 == Null)
-                                                    <p></p>
-                                                @else
-                                                    {{ $product->extra_2 }}
-                                                @endif
-                                            </p>
-                                            <ul class="zigzag_text_box">
-                                                @if($product->extra == Null)
-                                                <p></p>
-                                                @else
-                                                    {!! $product->extra !!}
-                                                @endif
-                                            </ul>
-                                        
-                                        </div>
-                                        <div> --}}
-                                        
-                                            {{-- purchase button --}}
-                                            {{-- <div id="top_right"></div> --}}
-                                            {{-- {{$mytoken}}
-                                        @if ( $mytoken == "null" || $mytoken == null)
-                                        <a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>
-                                        @else
-                                       
-                                        <a href="{{ route('payment.page', $product->id) }}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>   
-                                        @endif
-                                            
+                            <p class="fs-5 mt-2"><strong>Bootcamp Pro</strong> is a 16-hour intensive training program designed to help you become a confident and effective public speaker. 
+                                <br> The workshop includes two days of in-person sessions, 8 program modules, 30 video lessons, a 100-page workbook, 
+                                and 20 hands-on activities. <br> Upon completion, you'll receive a certification in public speaking and presentation skills. 
+                                <br> This workshop is ideal for those looking to improve their public speaking abilities or make a career change into the world of public speaking.
+                            </p>
+                            <div class="text-center">
+                                <a href="#price_table" class="btn main_background_color fw-bold">Learn More <span class="mt-3"><i class="fa fa-caret-right" aria-hidden="true"></i></span></a>
+                            </div>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach --}}
-                   
-                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
-                        <div class="">
-                            <div class="price_card">
-                                <div class="">
-                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Max: <span>20,000</span>/-</h4>
-                                    <div class="price_empty_div"></div>
-                                    <div class="p-4">
-                                        <p class="fs-3 fw-bold">Mastering your public Speaking</p>
-                                        <p class="zigzag_text_box">
-                                            Signature Public Speaking and Presentation Bootcamp Workshop <strong class="text-danger">PLUS</strong> a year-long practice session and assignments.
-                                        </p>
-                                        <p class="zigzag_text_box text-center fw-bold">16 hours+80 hours=96 hours</p>
-                                        <ul class="zigzag_text_box">
-                                            <li>2 daylong workshop at Basecamp</li>
-                                            <li>8 Program Modules</li>
-                                            <li>30 Video Lessons</li>
-                                            <li>100 pages Workbook & Handouts</li>
-                                            <li>20 Hands-On Activities</li>
-                                            <li>24/7 Access to Our Private Facebook Group</li>
-                                            <li>2 Assessments</li>
-                                            <li>Certification </li>
-                                            <li>Total = 16 hours</li>
-                                        </ul>
-                                        <p class="zigzag_text_box text-danger fw-bolder">
-                                            PLUS
-                                        </p>
-                                        <ul class="zigzag_text_box">
-                                            <li>40 sessions distributed in forty different weeks in a year</li>
-                                            <li>40 different themes in 40 sessions.</li>
-                                            <li>Master Certificate</li>
-                                            <li>Total (40x2)= 80 hours</li>
-                                        </ul>
-                                       
-                                    </div>
-                                    <div>
-                                    
-                                        {{-- purchase button --}}
-                                        <div id="top_right_2"></div>
-                                      
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
-               
+                    <div class="col-lg-5 col-xl-5 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="price_details">
+                            <h2 class="text-center fw-bolder mb-3">Bootcamp Max</h2>
+                            <div>
+                                <img src="{{asset('img/bootcamp_pro.jpg')}}" alt="" style="width: 100%; border-radius:5px;">
+                            </div>
+                            <p class="fs-5 mt-2"><strong>Bootcamp Max</strong> is a comprehensive 96-hour training program designed to help you master the art of public speaking. 
+                              <br>  Bootcamp Max includes a year-long practice session with 40 sessions covering 40 different themes <strong>PLUS</strong> everything on Bootcamp Pro. 
+                               Upon completion, you'll receive a certification in public speaking and presentation skills, as well as a Master Certificate. 
+                                <br> This workshop is ideal for those looking to improve their public speaking skills or transition into a career in public speaking.
+                            </p>
+                            <div class="text-center">
+                                <a href="#price_table" class="btn main_background_color fw-bold">Learn More <span class="mt-3"><i class="fa fa-caret-right" aria-hidden="true"></i></span></a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        {{-- price table section end --}}
+        {{-- price details section end --}}
         <section>
             <div class="container">
                 <div class="row">
@@ -322,11 +222,11 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="d-flex justify-content-start">
                             <div style="margin-top: 15px;"><span class="display-3 fw-bolder" style="border: 2px solid #000; padding: 0px 20px;">1</span></div>
-                            <div class="mx-3 mt-5">
+                            <div class="mx-3 mt-4">
                                 <span class="fs-5">Craft a <strong>powerful message</strong>.</span>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between mt-4">
+                        <div class="d-flex justify-content-start mt-4">
                             <div style="margin-top: 15px;"><span class="display-3 fw-bolder"  style="border: 2px solid #000; padding: 0px 20px;">2</span></div>
                             <div class="mx-3 mt-4">
                                 <span class="fs-5">Build your <strong>influential presence</strong>.</span>
@@ -336,7 +236,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="d-flex justify-content-start">
                             <div style="margin-top: 15px;"><span class="display-3 fw-bolder" style="border: 2px solid #000; padding: 0px 20px;">3</span></div>
-                            <div class="mx-3 mt-5">
+                            <div class="mx-3 mt-4">
                                 <span class="fs-5">Create an easy structure.</span>
                             </div>
                         </div>
@@ -906,8 +806,8 @@
                             </form>
                          
                             <div class="mt-4">
-                                <h2 class="fw-bolder">Or</h2>
-                                <h3>Call This number book your set : +88 01617-302010</h3>
+                                <h1 class="fw-bolder">Or</h1>
+                                <h3>Call at : +88 01617-302010</h3>
                             </div>
                            
                     </div>
@@ -915,6 +815,162 @@
             </div>
         </section>
         <!-- subscribtion section end -->
+        <!-- about the project section start -->
+        <section class="my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div>
+                            <h1 class="display-3 fw-bolder mb-5 text-center">About Bootcamp</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                        <div>
+                            <p class="fs-4">Public Speaking Bootcamp. It's a two-day intensive training session consisting of 5-star class outing. This workshop is perfect for anyone who wants to improve their public speaking skills or make a career change into the world of public speaking. We guarantee that you'll be more confident and comfortable after attending this course.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
+                </div>
+            </div>
+        </section>
+        <!-- about the project section end -->
+        {{-- price table section start --}}
+        <section class="my-5" id="price_table">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
+                        <div class="">
+                            <div class="price_card">
+                                <div class="">
+                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Pro: 15,000/-</h4>
+                                    <div class="price_empty_div"></div>
+                                    <div class="p-4">
+                                        <p class="fs-3 fw-bold">Know all the tools</p>
+                                        <p class="zigzag_text_box">Signature Public Speaking and Presentation Bootcamp Workshop</p>
+                                        <p class="zigzag_text_box text-center fw-bold mt-5">16-hour long session </p>
+                                        <ul class="zigzag_text_box">
+                                            <li>2 daylong workshops at Basecamp</li>
+                                            <li>8 Program Modules</li>
+                                            <li>30 Video Lessons</li>
+                                            <li>100 pages Workbook & Handouts</li>
+                                            <li>20 Hands-On Activities</li>
+                                            <li>24/7 Access to Our Private Facebook Group</li>
+                                            <li>2 Assessments</li>
+                                            <li>Certification </li>
+                                            <li>Total = 16 hours</li>
+                                        </ul>
+                                    </div>
+                                    <div class="margin_top">
+                                        <div id="top_right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- @foreach ($products as $product)
+                        <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
+                            <div class="">
+                                <div class="price_card">
+                                    <div class="">
+                                        <h4 class="text-center fw-bolder fs-4">{{ $product->product_name }}: <span>{{ $product->product_price }}</span>/-</h4>
+                                        <div class="price_empty_div"></div>
+                                        <div class="p-4">
+                                            <p class="fs-3 fw-bold">{{ $product->product_title }}</p>
+                                            <p class="zigzag_text_box">
+                                                {{ $product->short_desc }}
+                                            </p>
+                                            <p class="zigzag_text_box text-center fw-bold">{{ $product->time }}</p>
+                                            <ul class="zigzag_text_box">
+                                                {!! $product->long_desc !!}
+                                            </ul>
+                                            <p class="zigzag_text_box text-danger fw-bolder">
+                                                @if($product->extra_2 == Null)
+                                                    <p></p>
+                                                @else
+                                                    {{ $product->extra_2 }}
+                                                @endif
+                                            </p>
+                                            <ul class="zigzag_text_box">
+                                                @if($product->extra == Null)
+                                                <p></p>
+                                                @else
+                                                    {!! $product->extra !!}
+                                                @endif
+                                            </ul>
+                                        
+                                        </div>
+                                        <div> --}}
+                                        
+                                            {{-- purchase button --}}
+                                            {{-- <div id="top_right"></div> --}}
+                                            {{-- {{$mytoken}}
+                                        @if ( $mytoken == "null" || $mytoken == null)
+                                        <a href="{{route('login.page')}}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>
+                                        @else
+                                       
+                                        <a href="{{ route('payment.page', $product->id) }}" class="btn btn-danger fs-4 fw-bold rounded" style="width: 100%">Start Purchase</a>   
+                                        @endif
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach --}}
+                   
+                    <div class="col-xl-6 col-lg-6 col-md-6 cold-sm-12 col-xs-12">
+                        <div class="">
+                            <div class="price_card">
+                                <div class="">
+                                    <h4 class="text-center fw-bolder fs-4">Bootcamp Max: <span>20,000</span>/-</h4>
+                                    <div class="price_empty_div"></div>
+                                    <div class="p-4">
+                                        <p class="fs-3 fw-bold">Mastering your public Speaking</p>
+                                        <p class="zigzag_text_box">
+                                            Signature Public Speaking and Presentation Bootcamp Workshop <strong class="text-danger">PLUS</strong> a year-long practice session and assignments.
+                                        </p>
+                                        <p class="zigzag_text_box text-center fw-bold">16 hours+80 hours=96 hours</p>
+                                        <ul class="zigzag_text_box">
+                                            <li>2 daylong workshop at Basecamp</li>
+                                            <li>8 Program Modules</li>
+                                            <li>30 Video Lessons</li>
+                                            <li>100 pages Workbook & Handouts</li>
+                                            <li>20 Hands-On Activities</li>
+                                            <li>24/7 Access to Our Private Facebook Group</li>
+                                            <li>2 Assessments</li>
+                                            <li>Certification </li>
+                                            <li>Total = 16 hours</li>
+                                        </ul>
+                                        <p class="zigzag_text_box text-danger fw-bolder">
+                                            PLUS
+                                        </p>
+                                        <ul class="zigzag_text_box">
+                                            <li>40 sessions distributed in forty different weeks in a year</li>
+                                            <li>40 different themes in 40 sessions.</li>
+                                            <li>Master Certificate</li>
+                                            <li>Total (40x2)= 80 hours</li>
+                                        </ul>
+                                       
+                                    </div>
+                                    <div>
+                                    
+                                        {{-- purchase button --}}
+                                        <div id="top_right_2"></div>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+                </div>
+            </div>
+        </section>
+        {{-- price table section end --}}
 
         <!-- FAQ section start -->
         {{-- <section>
@@ -976,20 +1032,15 @@
             <div class="container">
                <div class="footer">
                     <div class="row">
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 mx-auto">
                             <div class="main_color px-5 pt-5">
                                 <p class="fs-4 fw-bold">PROFESSIONAL COURSE FOR <br> PUBLIC SPEAKING</p>
                                 <h1 class="display-4 fw-bold">BECOME <br> A PRO</h1>
                                 <p class="">Bespoke English Spoken Course to <br> Transform You from Average to Pro</p>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                            <div class="footer_icon">
-                                <a href="#" class="footer_icon_1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" class="footer_icon_2"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 mx-auto">
                             @include('frontend.flash-message')
                             <div>
                                 <form action="{{route('contact.with.us')}}" method="post" enctype="multipart/form-data">
@@ -1011,22 +1062,42 @@
                             </div>
                         </div>
                     </div>
+                    {{-- <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 mx-auto">
+                            <div class="footer_icon">
+                                <a href="#" class="footer_icon_1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#" class="footer_icon_2"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div> --}}
                </div>
             </div>
-            <div class="sticky-container">
-                <ul class="sticky">
-                    <li>
-                        <img src="img/phone.png" width="32" height="32">
-                        <p>+88 01617-302010</p>
-                    </li>
-                    {{-- <li class="mt-3">
-                        <img src="img/gmail.png" width="32" height="32">
-                        <p><a href="#" target="_blank">headoffice@hellobarc.com</a></p>
-                    </li> --}}
-                    
-                </ul>
-            </div>
         </section>
+        {{-- <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="sticky-container">
+                            <ul class="sticky">
+                                <li>
+                                    <img src="img/phone.png" width="32" height="32">
+                                    <p>+88 01617-302010</p>
+                                </li>
+                                <li class="mt-3">
+                                    <img src="img/facebook-logo.png" width="32" height="32">
+                                    <p class="mt-4 fw-bold"><a href="#" target="_blank" class="text-decoration-none">Facebook</a></p>
+                                </li>
+                                <li class="mt-3">
+                                    <img src="img/youtube.png" width="32" height="32">
+                                    <p class="mt-4 fw-bold"><a href="#" target="_blank" class="text-decoration-none">Youtube</a></p>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> --}}
         <!-- footer section end -->
         <!-- overflow section start -->
         <section class="main_background_color" id="overflow">
@@ -1038,7 +1109,7 @@
                                 <p class="h6 px-5 mt-3">Join Bootcamp and become a pro public speaker <br> Hurry up! The offer is limited.</p>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
                             <div class="text-center discount">
                                 <p class="white_background px-2 text-center"> <span class="fw-bold fs-5">50%</span><br> off</p>
                             </div>
@@ -1100,7 +1171,7 @@
     </script>
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("nov 5, 2022 23:59:59").getTime();
+        var countDownDate = new Date("jan 5, 2023 23:59:59").getTime();
         
         // Update the count down every 1 second
         var x = setInterval(function() {

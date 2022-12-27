@@ -43,16 +43,21 @@
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped text-center">
                                 <thead>
-                                    <th>Total User</th>
-                                    <th>Total Purchase</th>
-                                    <th>Total Pending Purchase</th>
+                                    <th>Sl No</th>
+                                    <th>Email</th>
+                                    <th>Contact</th>
+                                    <th>Message</th>
                                 </thead>
                                 <tbody>
+                                    @foreach ($contactUsers as $rows)
                                     <tr>
-                                        <td>{{$user_count}}</td>
-                                        <td>{{$orders}}</td>
-                                        <td>{{$pending_orders}}</td>
+                                        <td>{{$loop->index+1}}</td>
+                                        <td>{{$rows->email}}</td>
+                                        <td>{{$rows->contact}}</td>
+                                        <td>{{$rows->user_message}}</td>
                                     </tr>
+                                    @endforeach
+                                    
                                 </tbody>
                             </table>
                         </div>

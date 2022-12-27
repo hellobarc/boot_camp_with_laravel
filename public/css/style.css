@@ -42,6 +42,7 @@ a.navbar-brand {
   /* padding: 50px; */
   padding-bottom: 50px;
   padding-top: 5%;
+  position: relative;
 
 }
 .banner_img{
@@ -109,6 +110,16 @@ a.navbar-brand {
 .zigzag_text_box {
   font-size: 22px;
 }
+/* price details section start */
+.price_details{
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 33px 10px rgba(98,106,115,0.07)!important;
+  outline: none;
+  margin-top: 30px;
+}
+/* price details section end */
 /* before and after css start */
 .before_card{
   background-color: #fff;
@@ -331,50 +342,80 @@ a.navbar-brand {
   color: #000;
 }
 /* sticky icon start */
-.sticky-container{
-  padding:0px;
-  margin:0px;
-  position:fixed;
-  right:-130px;
-  top:230px;
-  width:204px;
-  z-index: 1100;
-  
+
+.sticky_icon nav{
+  position: fixed;
+  width: 0px;
+  transition: all 0.3s linear;
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4);
+  z-index: 1;
+  top: 32%;
 }
-.sticky li{
-  list-style-type:none;
-  background-color:#fff;
-  color:#efefef;
-  height:43px;
-  padding:0px;
-  margin:0px 0px 1px 0px;
-  -webkit-transition:all 0.25s ease-in-out;
-  -moz-transition:all 0.25s ease-in-out;
-  -o-transition:all 0.25s ease-in-out;
-  transition:all 1s ease-in-out;
-  cursor:pointer;
-  border-radius: 5px;
+
+.sticky_icon nav ul {
+    margin-top: 10px;
+    margin-bottom: 0rem;
+    list-style: none;
+    margin-left: -50px;
 }
-.sticky li:hover{
-  margin-left:-135px;
+.sticky_icon nav li{
+  height: 45px;
+  position:relative;
+  margin-top: 10px;
 }
-.sticky li img{
-  float:left;
-  margin:5px 4px;
-  margin-right:5px;
+.sticky_icon nav li a{
+  color: #fff !important;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 45px;
+  padding-left:25%;
+  padding-right: 55px;
+  /* border-bottom: 1px solid rgba(0,0,0,.4); */
+  transition: all .3s linear;
+  text-decoration: none !important;
+  border-radius: 0px 10px 10px 0px;
 }
-.sticky li p{
-  padding-top:5px;
-  margin:0px;
-  line-height:16px;
-  font-size:16px;
+.sticky_icon nav li:nth-child(1) a{
+  background: #007c1fc9;
 }
-.sticky li p{
-  /* text-decoration:none; */
-  color:#2C3539;
+.sticky_icon nav li:nth-child(2) a{
+  background: #3f6eeb;
 }
-.sticky li p a:hover{
-  text-decoration:underline;
+/* .sticky_icon nav li:nth-child(3) a{
+  background: #E1306C;
+} */
+.sticky_icon nav li:nth-child(3) a{
+  background: #ff0000;
+}
+/* .sticky_icon nav li:nth-child(5) a{
+  background: #333;
+} */
+.sticky_icon nav li:nth-child(4) a{
+  background: #ff0000;
+}
+.sticky_icon nav li a i{
+  position: absolute;
+  top: 9px;
+  left: 22px;
+  font-size: 25px;
+}
+.sticky_icon ul li a span{
+  display: none;
+  font-weight: bold;
+  /* letter-spacing: 1px; */
+}
+
+.sticky_icon a:hover {
+  z-index:1;
+  width: 240px;
+  /* border-bottom: 1px solid rgba(0,0,0,.5); */
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
+}
+.sticky_icon ul li:hover a span{
+  padding-left: 20%;
+  display: block;
+  font-size: 16px;
 }
 /* sticky icon end */
 /* owl carousal css start */
@@ -406,10 +447,10 @@ button.owl-next {
 .owl-nav span{
   font-size: 60px;
   font-weight: 800;
-  color: #000;
+  color: #fff;
 }
 .owl-nav span:hover{
-  color:#000;
+  color:#fff;
 }
 /* owl carousal css end */
 #overflow{
@@ -641,7 +682,7 @@ button.owl-next {
     padding: 0 10px;
   }
 /* responsive section css start */
-  @media only screen and (max-width: 412px) {
+  @media only screen and (max-width: 480px) {
     .navbar-light .navbar-toggler{
       margin-left: 81%;
       background-color: #fff;
@@ -730,4 +771,13 @@ button.owl-next {
   .game_changing_img_1{
     margin-top: 0;
   }
+  /* #overflow{
+    width: 25%;
+  } */
+ .sticky_icon nav{
+  top: 10%;
+ }
+ .footer_section{
+  padding-bottom: 40%;
+ }
   }

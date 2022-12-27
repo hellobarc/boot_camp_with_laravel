@@ -40,6 +40,7 @@ Route::get('/admin-dashboard-user', [App\Http\Controllers\AdminController::class
 Route::get('/admin-dashboard-purchase', [App\Http\Controllers\AdminController::class, 'adminDashboardPurchase'])->name('admin.dashboard.purchase');
 Route::post('/admin-dashboard-purchase-submit/{id}', [App\Http\Controllers\AdminController::class, 'adminDashboardPurchaseSubmit'])->name('admin.dashboard.purchase.submit');
 Route::post('/admin-logout', [App\Http\Controllers\AdminController::class, 'destroy'])->name('admin.logout');
+Route::get('/admin-contact-users', [App\Http\Controllers\AdminController::class, 'contactUsers'])->name('admin.dashboard.contact.user');
 });
 Route::match(['GET', 'POST'], '/admin-login', [App\Http\Controllers\AdminLoginController::class, 'login'])->name('login.control');
 

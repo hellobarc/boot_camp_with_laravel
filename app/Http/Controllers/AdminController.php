@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Products;
 use App\Models\User;
 use App\Models\Admin;
+use App\Models\UserContactList;
 use Illuminate\Support\Facades\Hash;
 use Session;
 use Mail;
@@ -32,7 +33,7 @@ class AdminController extends Controller
     public function adminDashboardPurchase(Request $request)
     {
         $orders = Order::with('user')->get();
-        // dd($orders);
+        //dd($orders);
         return view('admin.all_purchase', compact('orders'));
     }
     public function adminDashboardPurchaseSubmit(Request $request, $id)
@@ -53,5 +54,10 @@ class AdminController extends Controller
     {
         $request->session()->flush();
         return redirect()->route('login.control');
+    }
+    public function contactUsers()
+    {
+        $contactUsers = UserContactList::all();
+        return view('admin.contact-users', compact('contactUsers'));
     }
 }
